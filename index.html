@@ -1,0 +1,602 @@
+<!-- FILENAME: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rugged Path — Raw Faith. Real Stories.</title>
+<meta name="description" content="The Rugged Path is a long-form interview podcast featuring raw, honest conversations with people forged by war, addiction, trauma, and hard places who found their way to faith.">
+<meta property="og:title" content="The Rugged Path — Raw Faith. Real Stories.">
+<meta property="og:description" content="Raw, honest conversations with people forged by war, addiction, trauma, and hard places who found their way to faith.">
+<meta property="og:image" content="/images/Rugged_Path_Hero_Image_New_Site.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/nav.css">
+<style>
+  :root{
+    --bg:#0d0d0f;
+    --bg2:#121110;
+    --bg3:#1a1816;
+    --brand:#ab9477;
+    --brand-lt:#c8b090;
+    --cream:#f0ebe0;
+    --cream-mid:#c8bfaa;
+    --cream-dim:#6b5f50;
+    --border:rgba(171,148,119,0.12);
+    --border2:rgba(171,148,119,0.25);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:'Lora',serif;
+    line-height:1.7;
+  }
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:'Cinzel',serif;}
+  .eyebrow{
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.25em;
+    font-size:0.8rem;
+    color:var(--brand);
+    font-weight:600;
+  }
+
+  .wordmark{
+    font-family:'Cinzel',serif;
+    font-size:1.1rem;
+    letter-spacing:0.15em;
+    color:var(--cream);
+    text-transform:uppercase;
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .hero-bg{
+    position:absolute;
+    inset:0;
+    background-image:url('/images/Rugged_Path_Hero_Image_New_Site.jpg');
+    background-size:cover;
+    background-position:center;
+  }
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(13,13,15,0.55) 0%, rgba(13,13,15,0.45) 40%, rgba(13,13,15,0.85) 85%, var(--bg) 100%);
+  }
+  .reticle{position:absolute;inset:0;pointer-events:none;}
+  .hero-content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:0 2rem;
+    max-width:900px;
+  }
+  .hero-title{
+    font-size:clamp(2.6rem, 8vw, 5.5rem);
+    color:var(--brand);
+    letter-spacing:0.05em;
+    margin-bottom:1.2rem;
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.1s;
+  }
+  .hero-tagline{
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.35em;
+    font-weight:500;
+    font-size:clamp(1rem, 2.4vw, 1.4rem);
+    color:#fff;
+    margin-bottom:1.8rem;
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.4s;
+  }
+  .hero-rule{
+    width:60px;
+    height:2px;
+    background:var(--brand);
+    margin:0 auto 1.8rem;
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.7s;
+  }
+  .hero-desc{
+    font-family:'Lora',serif;
+    color:var(--cream-mid);
+    font-size:1.1rem;
+    max-width:640px;
+    margin:0 auto 2.4rem;
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:1s;
+  }
+  .hero-btns{
+    display:flex;
+    gap:1rem;
+    justify-content:center;
+    flex-wrap:wrap;
+    opacity:0;
+    animation:fadeUp 1s ease forwards;
+    animation-delay:1.3s;
+  }
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
+  }
+
+  .btn-primary, .btn-ghost, .btn-outline{
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    font-size:0.9rem;
+    padding:0.9rem 1.8rem;
+    display:inline-block;
+    border-radius:2px;
+    transition:all .2s;
+  }
+  .btn-primary{
+    background:var(--brand);
+    color:var(--bg);
+    font-weight:600;
+  }
+  .btn-primary:hover{background:var(--brand-lt);}
+  .btn-ghost{
+    border:1px solid var(--border2);
+    color:var(--cream);
+  }
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand);}
+  .btn-outline{
+    border:1px solid var(--brand);
+    color:var(--brand);
+    background:transparent;
+  }
+  .btn-outline:hover{background:var(--brand);color:var(--bg);}
+
+  /* LATEST EPISODE */
+  .latest-section{
+    background:var(--bg2);
+    padding:6rem 3rem;
+  }
+  .latest-grid{
+    display:grid;
+    grid-template-columns:1fr 380px;
+    gap:3.5rem;
+    max-width:1200px;
+    margin:0 auto;
+    align-items:start;
+  }
+  .ep-meta{
+    display:flex;
+    gap:1rem;
+    align-items:center;
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.2em;
+    font-size:0.85rem;
+    color:var(--brand);
+    margin:1rem 0 1.4rem;
+  }
+  .ep-meta .dot{width:4px;height:4px;background:var(--brand);border-radius:50%;}
+  .latest-heading{
+    font-size:clamp(2rem, 4.5vw, 3.2rem);
+    color:var(--cream);
+    line-height:1.25;
+    margin-bottom:1.6rem;
+  }
+  .latest-heading .guest-name{color:var(--brand);}
+  .latest-summary{
+    font-style:italic;
+    color:var(--cream-mid);
+    max-width:600px;
+    margin-bottom:2rem;
+  }
+
+  .player-card{
+    position:relative;
+    background:var(--bg3);
+    border:1px solid var(--border);
+    padding:1.6rem;
+    height:fit-content;
+  }
+  .player-card::before, .player-card::after{
+    content:'';
+    position:absolute;
+    width:18px;height:18px;
+    border-color:var(--brand);
+    border-style:solid;
+  }
+  .player-card::before{
+    top:-1px;left:-1px;
+    border-width:2px 0 0 2px;
+  }
+  .player-card::after{
+    bottom:-1px;right:-1px;
+    border-width:0 2px 2px 0;
+  }
+  .player-card iframe{margin-bottom:1.4rem;}
+  .platform-links{
+    display:flex;flex-direction:column;gap:0.7rem;
+  }
+  .platform-links a{
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    font-size:0.85rem;
+    color:var(--cream-mid);
+    padding:0.7rem 0.9rem;
+    border:1px solid var(--border);
+    transition:all .2s;
+    text-align:center;
+  }
+  .platform-links a:hover{color:var(--brand);border-color:var(--border2);}
+
+  /* PLATFORMS */
+  .platforms-section{
+    background:var(--bg2);
+    padding:0 3rem 6rem;
+    text-align:center;
+  }
+  .platforms-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1rem;
+    max-width:1000px;
+    margin:0 auto;
+  }
+
+  /* HOST STRIP */
+  .host-section{
+    background:var(--bg);
+    padding:6rem 3rem;
+  }
+  .host-grid{
+    display:grid;
+    grid-template-columns:380px 1fr;
+    gap:3.5rem;
+    max-width:1200px;
+    margin:0 auto;
+    align-items:center;
+  }
+  .host-photo-wrap{
+    position:relative;
+  }
+  .host-photo-wrap::before, .host-photo-wrap::after{
+    content:'';
+    position:absolute;
+    width:24px;height:24px;
+    border-color:var(--brand);
+    border-style:solid;
+    z-index:2;
+  }
+  .host-photo-wrap::before{
+    top:-10px;left:-10px;
+    border-width:2px 0 0 2px;
+  }
+  .host-photo-wrap::after{
+    bottom:-10px;right:-10px;
+    border-width:0 2px 2px 0;
+  }
+  .host-photo-wrap img{
+    width:100%;
+    height:460px;
+    object-fit:cover;
+    object-position:57% 22%;
+    display:block;
+  }
+  .host-name{
+    font-size:clamp(1.8rem, 3.5vw, 2.6rem);
+    color:var(--brand);
+    margin:1rem 0 0.6rem;
+  }
+  .host-credentials{
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    font-size:0.9rem;
+    color:var(--cream-dim);
+    margin-bottom:1.6rem;
+  }
+  .host-bio p{
+    color:var(--cream-mid);
+    margin-bottom:1.2rem;
+  }
+  .host-quote{
+    border-left:2px solid var(--brand);
+    padding-left:1.6rem;
+    margin:1.8rem 0;
+    font-style:italic;
+    font-size:1.15rem;
+    color:var(--cream);
+  }
+
+  /* NEWSLETTER */
+  .newsletter-section{
+    background:var(--bg2);
+    padding:6rem 3rem;
+    text-align:center;
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+  }
+  .newsletter-section h2{
+    font-size:clamp(2rem, 4vw, 3rem);
+    color:var(--brand);
+    line-height:1.2;
+    margin-bottom:1rem;
+  }
+  .newsletter-section h2 .line2{display:block;color:var(--cream);}
+  .newsletter-desc{
+    color:var(--cream-mid);
+    max-width:600px;
+    margin:0 auto 3rem;
+  }
+  .perks-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:1.4rem;
+    max-width:1100px;
+    margin:0 auto 3rem;
+    text-align:left;
+  }
+  .perk-card{
+    background:var(--bg3);
+    border:1px solid var(--border);
+    padding:1.6rem;
+  }
+  .perk-card h4{
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    font-size:1rem;
+    color:var(--brand);
+    margin-bottom:0.6rem;
+  }
+  .perk-card p{
+    color:var(--cream-mid);
+    font-size:0.95rem;
+  }
+  .newsletter-form{
+    display:flex;
+    justify-content:center;
+    gap:0.8rem;
+    max-width:480px;
+    margin:0 auto;
+    flex-wrap:wrap;
+  }
+  .newsletter-form input[type="email"]{
+    flex:1;
+    min-width:220px;
+    padding:0.9rem 1.2rem;
+    background:var(--bg3);
+    border:1px solid var(--border2);
+    color:var(--cream);
+    font-family:'Lora',serif;
+  }
+  .newsletter-form button{
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    background:var(--brand);
+    color:var(--bg);
+    border:none;
+    padding:0.9rem 1.8rem;
+    font-weight:600;
+    cursor:pointer;
+  }
+
+  /* FOOTER */
+  footer{
+    background:var(--bg3);
+    padding:4rem 3rem 2rem;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:2rem;
+    max-width:1100px;
+    margin:0 auto 3rem;
+  }
+  .footer-col .wordmark{display:block;margin-bottom:1rem;}
+  .footer-col h4{
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.15em;
+    font-size:0.85rem;
+    color:var(--brand);
+    margin-bottom:1rem;
+  }
+  .footer-col a{
+    display:block;
+    color:var(--cream-mid);
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:0.95rem;
+    padding:0.35rem 0;
+    transition:color .2s;
+  }
+  .footer-col a:hover{color:var(--brand);}
+  .footer-bottom{
+    text-align:center;
+    padding-top:2rem;
+    border-top:1px solid var(--border);
+    font-family:'Barlow Condensed',sans-serif;
+    font-size:0.8rem;
+    letter-spacing:0.08em;
+    color:var(--cream-dim);
+    text-transform:uppercase;
+  }
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+
+  @media (max-width:860px){
+    .latest-section, .host-section, .newsletter-section{padding:4rem 1.4rem;}
+    .platforms-section{padding:0 1.4rem 4rem;}
+    .latest-grid, .host-grid{grid-template-columns:1fr;}
+    .host-photo-wrap img{height:340px;}
+    .footer-grid{grid-template-columns:1fr;padding:0 1.4rem;}
+  }
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <svg class="reticle" viewBox="0 0 1440 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="450" x2="1440" y2="450" stroke="rgba(171,148,119,0.14)" stroke-width="1" stroke-dasharray="6 10"/>
+    <line x1="1080" y1="0" x2="1080" y2="900" stroke="rgba(171,148,119,0.12)" stroke-width="1" stroke-dasharray="6 10"/>
+    <line x1="360" y1="0" x2="360" y2="900" stroke="rgba(171,148,119,0.1)" stroke-width="1" stroke-dasharray="6 10"/>
+    <polygon points="1070,440 1090,440 1080,458" fill="rgba(171,148,119,0.3)"/>
+    <text x="1100" y="430" font-family="Barlow Condensed, sans-serif" font-size="13" letter-spacing="2" fill="rgba(171,148,119,0.28)">36.9N 79.0W</text>
+  </svg>
+  <div class="hero-content">
+    <h1 class="hero-title">THE RUGGED PATH</h1>
+    <p class="hero-tagline">Raw Faith. Real Stories.</p>
+    <div class="hero-rule"></div>
+    <p class="hero-desc">Long-form conversations with people who have walked through war, addiction, trauma, violence, and broken relationships — and found, or are still finding, their way to faith. No polished testimonies. No formulas. Just real people whose faith was forged in genuinely hard places.</p>
+    <div class="hero-btns">
+      <a href="#latest" class="btn-primary">Hear the Latest Episode</a>
+      <a href="#newsletter" class="btn-ghost">Get Dispatches from the Path</a>
+    </div>
+  </div>
+</section>
+
+<section class="latest-section" id="latest">
+  <div class="latest-grid">
+    <div class="reveal">
+      <p class="eyebrow">Latest Episode</p>
+      <div class="ep-meta"><span>Episode 009</span><span class="dot"></span><span>July 7, 2026</span></div>
+      <h2 class="latest-heading"><span class="guest-name">Phil Bivins</span>:<br>Saved at a Picnic Table Between 2 Wars</h2>
+      <p class="latest-summary">Phil Bivins is a three-time United States Navy veteran whose service spanned Vietnam to Desert Storm, including duty aboard the USS Nimitz during the Iran Hostage Crisis. A registered nurse for 40 years, he found faith in 1978 through a chance conversation outside a Navy chapel and has spent the past 15 to 17 years growing in his walk with God at Grace Church, where he leads a men's small group today.</p>
+      <a href="/phil-bivins.html" class="btn-outline">Full Episode Page</a>
+    </div>
+
+    <div class="player-card reveal">
+      <iframe title="Phil Bivins: Saved at a Picnic Table Between 2 Wars | The Rugged Path" allowtransparency="true" height="300" width="100%" style="border: none; min-width: min(100%, 430px);height:300px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=ae58e-1b02eb9-pb&from=pb6admin&square=1&share=1&download=1&rtl=0&fonts=Arial&skin=1b1b1b&font-color=auto&logo_link=episode_page&btn-skin=666666&size=300" loading="lazy" allowfullscreen=""></iframe>
+      <div class="platform-links">
+        <a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener">Apple Podcasts</a>
+        <a href="https://open.spotify.com/show/2b2hgclLtwxCrXdXYvfIuU?si=0a94d59837314609" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://www.youtube.com/@theruggedpathpodcast" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://rumble.com/user/The_Rugged_Path_Podcast" target="_blank" rel="noopener">Rumble</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="platforms-section">
+  <div class="platforms-row reveal">
+    <a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" class="btn-ghost" target="_blank" rel="noopener">Apple Podcasts</a>
+    <a href="https://open.spotify.com/show/theruggedpath" class="btn-ghost" target="_blank" rel="noopener">Spotify</a>
+    <a href="https://www.youtube.com/@theruggedpathpodcast" class="btn-ghost" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://rumble.com/user/The_Rugged_Path_Podcast" class="btn-ghost" target="_blank" rel="noopener">Rumble</a>
+    <a href="https://www.podbean.com/pw/pbblog-zs6j6-151d063" class="btn-ghost" target="_blank" rel="noopener">Podbean</a>
+    <a href="https://music.amazon.com/podcasts/364218b6-2344-4fd7-bad8-87465ddc93c3" class="btn-ghost" target="_blank" rel="noopener">Amazon Music</a>
+    <a href="https://iheart.com/podcast/327146008" class="btn-ghost" target="_blank" rel="noopener">iHeartRadio</a>
+  </div>
+</section>
+
+<section class="host-section">
+  <div class="host-grid">
+    <div class="host-photo-wrap reveal">
+      <img src="/images/Cast_Thumbnail_2.jpg" alt="Dan Black, host of The Rugged Path">
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">The Host</p>
+      <h2 class="host-name">Dan Black</h2>
+      <p class="host-credentials">Veteran / Former Tattoo Artist / Host</p>
+      <div class="host-bio">
+        <p>Dan Black has lived more than one life — soldier, tattoo artist, and now the voice behind conversations the Church usually leaves out. He doesn't come to these stories as an outsider looking in. He's walked through hard places himself, and it shows in the way he asks questions and the way he listens.</p>
+        <p>The Rugged Path exists because Dan got tired of polished testimonies that skip the messy middle. Every episode is an unscripted, honest conversation with someone whose faith was forged — or is still being forged — in real hardship. No formulas. No performance. Just the truth, however long it takes to tell it.</p>
+      </div>
+      <blockquote class="host-quote">"I'm not interested in the highlight reel. I want to know what it actually looked like in the dark."</blockquote>
+      <a href="/about-the-host.html" class="btn-outline">Full Story</a>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter-section" id="newsletter">
+  <h2>Dispatches<span class="line2">From the Path</span></h2>
+  <p class="newsletter-desc">A personal note from Dan every other week — not a recap of the episode, but what's actually on his mind. Sign up and get it straight to your inbox.</p>
+  <div class="perks-grid reveal">
+    <div class="perk-card">
+      <h4>From Dan</h4>
+      <p>A personal note, not a recap. What's actually on his mind between episodes.</p>
+    </div>
+    <div class="perk-card">
+      <h4>Off Record</h4>
+      <p>The moment from the conversation that didn't make the final cut.</p>
+    </div>
+    <div class="perk-card">
+      <h4>First to Know</h4>
+      <p>New episodes and updates before they hit social media.</p>
+    </div>
+    <div class="perk-card">
+      <h4>Direct Line</h4>
+      <p>A way to submit a guest or a story you think Dan should hear.</p>
+    </div>
+  </div>
+  <form class="newsletter-form" action="https://app.kit.com/forms/9257743/subscriptions" method="post">
+    <input type="email" name="email_address" placeholder="Your email address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <a href="/index.html" class="wordmark">The Rugged Path</a>
+      <p style="color:var(--cream-dim); font-size:0.9rem;">Raw Faith. Real Stories.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <a href="/index.html">Home</a>
+      <a href="/episodes.html">Episodes</a>
+      <a href="/about.html">About</a>
+      <a href="/about-the-host.html">Host</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Listen On</h4>
+      <a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener">Apple Podcasts</a>
+      <a href="https://open.spotify.com/show/theruggedpath" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://www.youtube.com/@theruggedpathpodcast" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://rumble.com/user/The_Rugged_Path_Podcast" target="_blank" rel="noopener">Rumble</a>
+      <a href="https://www.podbean.com/pw/pbblog-zs6j6-151d063" target="_blank" rel="noopener">Podbean</a>
+      <a href="https://music.amazon.com/podcasts/364218b6-2344-4fd7-bad8-87465ddc93c3" target="_blank" rel="noopener">Amazon Music</a>
+      <a href="https://iheart.com/podcast/327146008" target="_blank" rel="noopener">iHeartRadio</a>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 The Rugged Path. All Rights Reserved.</div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  });
+</script>
+<script src="/js/nav-include.js"></script>
+
+</body>
+</html>

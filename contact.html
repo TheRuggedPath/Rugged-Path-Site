@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/nav.css">
+<title>Contact — The Rugged Path</title>
+<meta name="description" content="Get in touch with The Rugged Path — submit a guest, reach out about sponsorship, or just say hello.">
+<meta property="og:title" content="Contact — The Rugged Path">
+<meta property="og:description" content="Get in touch with The Rugged Path — submit a guest, reach out about sponsorship, or just say hello.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0d0d0f;color:#f0ebe0;font-family:'Lora',Georgia,serif;font-size:16px;line-height:1.7;overflow-x:hidden}
+:root{
+  --bg:#0d0d0f;--bg2:#121110;--bg3:#1a1816;--bg4:#201e1b;
+  --brand:#ab9477;--brand-lt:#c8b090;--brand-dk:#7a6a55;
+  --cream:#f0ebe0;--cream-mid:#c8bfaa;--cream-dim:#6b5f50;--white:#ffffff;
+  --border:rgba(171,148,119,0.12);--border2:rgba(171,148,119,0.25);--border3:rgba(171,148,119,0.4);
+  --display:'Cinzel','Times New Roman',serif;
+  --condensed:'Barlow Condensed',sans-serif;
+  --serif:'Lora',Georgia,serif;
+}
+.section{padding:96px 48px;position:relative}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-inner-sm{max-width:720px;margin:0 auto}
+.eyebrow{font-family:var(--condensed);font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--brand);margin-bottom:32px;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:'';width:26px;height:1px;background:var(--brand);opacity:0.6;flex-shrink:0}
+.eyebrow::after{content:'';width:48px;height:1px;background:var(--border3)}
+.page-hero{padding:140px 48px 80px;background:var(--bg2);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.page-hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2}
+.page-hero-reticle{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.page-title{font-family:var(--display);font-size:clamp(40px,6vw,86px);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);line-height:1;margin-bottom:14px}
+.page-sub{font-family:var(--condensed);font-size:clamp(12px,1.5vw,16px);font-weight:500;letter-spacing:0.3em;text-transform:uppercase;color:var(--white);margin-bottom:20px}
+.page-desc{font-family:var(--serif);font-size:clamp(15px,1.5vw,18px);color:var(--cream-mid);line-height:1.85;max-width:600px}
+.brand-rule{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--brand) 25%,var(--brand) 75%,transparent);opacity:0.15}
+.btn-primary{font-family:var(--condensed);font-size:13px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;background:var(--brand);color:var(--bg);padding:13px 34px;border:1px solid var(--brand);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all 0.2s}
+.btn-primary:hover{background:var(--brand-lt);border-color:var(--brand-lt)}
+.btn-ghost{font-family:var(--condensed);font-size:13px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream-mid);background:transparent;border:1px solid var(--border2);padding:13px 30px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all 0.2s}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.btn-outline{font-family:var(--condensed);font-size:11px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--brand);background:transparent;border:1px solid var(--border2);padding:10px 24px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.15s}
+.btn-outline:hover{border-color:var(--brand);background:rgba(171,148,119,0.06)}
+.btn-outline::after{content:'→';transition:transform 0.15s}
+.btn-outline:hover::after{transform:translateX(3px)}
+.nl-strip{background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:64px 48px}
+.nl-strip-inner{max-width:680px;margin:0 auto;text-align:center}
+.nl-title{font-family:var(--display);font-size:clamp(32px,4vw,56px);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);line-height:1;margin-bottom:4px}
+.nl-sub{font-family:var(--display);font-size:clamp(16px,2vw,24px);font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--cream-mid);margin-bottom:24px}
+.nl-body{font-family:var(--serif);font-size:15px;color:var(--cream-mid);line-height:1.8;margin-bottom:28px}
+.nl-form{display:flex;gap:0;max-width:460px;margin:0 auto}
+.nl-input{flex:1;background:var(--bg);border:1px solid var(--border2);border-right:none;padding:13px 16px;color:var(--cream);font-family:var(--condensed);font-size:13px;letter-spacing:0.06em;outline:none;transition:border-color 0.15s}
+.nl-input:focus{border-color:var(--brand)}
+.nl-input::placeholder{color:var(--cream-dim)}
+.nl-btn{background:var(--brand);color:var(--bg);border:1px solid var(--brand);padding:13px 22px;font-family:var(--condensed);font-size:12px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:all 0.15s}
+.nl-btn:hover{background:var(--brand-lt);border-color:var(--brand-lt)}
+.nl-note{font-family:var(--condensed);font-size:10px;color:var(--cream-dim);margin-top:10px;letter-spacing:0.08em;text-transform:uppercase}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 48px 32px}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:40px;margin-bottom:28px;flex-wrap:wrap}
+.footer-wordmark{font-family:var(--display);font-size:21px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--brand);display:block;margin-bottom:6px}
+.footer-tagline{font-family:var(--condensed);font-size:10px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--cream-dim)}
+.footer-col-title{font-family:var(--condensed);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--brand);margin-bottom:12px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col a{font-family:var(--condensed);font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream-dim);text-decoration:none;transition:color 0.15s}
+.footer-col a:hover{color:var(--brand-lt)}
+.footer-bottom{padding-top:22px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-copy{font-family:var(--condensed);font-size:10px;letter-spacing:0.1em;color:var(--cream-dim)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.75s ease,transform 0.75s ease}
+.reveal.visible{opacity:1;transform:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){
+  .section{padding:64px 22px}
+  .page-hero{padding:110px 22px 60px}
+  .nl-strip{padding:48px 22px}
+  footer{padding:36px 22px 28px}
+  .footer-top{flex-direction:column;gap:24px}
+  .footer-bottom{flex-direction:column;align-items:flex-start}
+  .nl-form{flex-direction:column;gap:8px}
+  .nl-input{border-right:1px solid var(--border2)}
+}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.contact-intro{font-family:var(--serif);font-size:16px;color:var(--cream-mid);line-height:1.85;margin-bottom:24px}
+.contact-methods{display:flex;flex-direction:column;gap:14px}
+.contact-method{padding:14px 18px;background:var(--bg3);border:1px solid var(--border);border-left:2px solid var(--brand)}
+.cm-label{font-family:var(--condensed);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--brand);margin-bottom:4px}
+.cm-value{font-family:var(--condensed);font-size:13px;color:var(--cream-mid);letter-spacing:0.04em}
+.cm-value a{color:var(--brand-lt);text-decoration:none}
+.form-card{background:var(--bg3);border:1px solid var(--border);padding:36px;position:relative}
+.form-card::before,.form-card::after{content:'';position:absolute;width:10px;height:10px}
+.form-card::before{top:-1px;left:-1px;border-top:2px solid var(--brand);border-left:2px solid var(--brand)}
+.form-card::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--brand);border-right:2px solid var(--brand)}
+.form-title{font-family:var(--display);font-size:22px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--brand);margin-bottom:22px}
+.form-row{margin-bottom:16px}
+.form-row label{display:block;font-family:var(--condensed);font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--cream-dim);margin-bottom:6px}
+.form-row input,.form-row select,.form-row textarea{width:100%;background:var(--bg);border:1px solid var(--border2);padding:11px 14px;color:var(--cream);font-family:var(--condensed);font-size:13px;letter-spacing:0.05em;outline:none;transition:border-color 0.15s;appearance:none}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{border-color:var(--brand)}
+.form-row input::placeholder,.form-row textarea::placeholder{color:var(--cream-dim)}
+.form-row textarea{min-height:120px;resize:vertical;font-family:var(--serif);font-size:14px;letter-spacing:0}
+.form-row select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23ab9477'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.form-row select option{background:#1a1816}
+.form-submit{width:100%;background:var(--brand);color:var(--bg);border:none;padding:14px;font-family:var(--condensed);font-size:13px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.15s;margin-top:6px}
+.form-submit:hover{background:var(--brand-lt)}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+<div class="page-hero">
+  <div class="page-hero-reticle"><svg width="100%" height="100%" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;pointer-events:none;"><line x1="0" y1="220" x2="1440" y2="220" stroke="rgba(171,148,119,0.12)" stroke-width="0.5" stroke-dasharray="4 9"/><line x1="1238" y1="0" x2="1238" y2="400" stroke="rgba(171,148,119,0.08)" stroke-width="0.5"/><polygon points="1238,213 1244,220 1238,227" fill="rgba(171,148,119,0.35)"/><text x="1246" y="219" font-family="Barlow Condensed,sans-serif" font-size="9" letter-spacing="2" fill="rgba(171,148,119,0.35)">&lt;10&gt;</text><g stroke="rgba(171,148,119,0.18)" stroke-width="0.5"><line x1="52" y1="48" x2="52" y2="78"/><line x1="37" y1="63" x2="67" y2="63"/></g></svg></div>
+  <div class="page-hero-inner">
+    <div class="eyebrow">Get in Touch</div>
+    <h1 class="page-title">Contact</h1>
+    <p class="page-sub">The Rugged Path</p>
+    <p class="page-desc">Submit a guest, reach out about sponsorship, or just say hello. Dan reads everything.</p>
+  </div>
+</div>
+<div class="brand-rule"></div>
+<section class="section">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="eyebrow">Before You Write</div>
+        <p class="contact-intro">Dan reads every message. He does not always respond quickly because the show comes first — but he does read everything. If you are reaching out about a guest submission, the more specific you are about their story, the better.</p>
+        <div class="contact-methods">
+          <div class="contact-method"><div class="cm-label">Guest Submissions</div><div class="cm-value">Use the form. Tell Dan the person&#x2019;s name, what they have been through, and why their story belongs on The Rugged Path.</div></div>
+          <div class="contact-method"><div class="cm-label">Sponsorship &amp; Partnership</div><div class="cm-value">Use the form and select Sponsorship. Include your brand and what you have in mind.</div></div>
+          <div class="contact-method"><div class="cm-label">Social Media</div><div class="cm-value"><a href="https://www.instagram.com/theruggedpathpodcast" target="_blank" rel="noopener">@theruggedpathpodcast</a> on Instagram &amp; Facebook</div></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="form-card">
+          <div class="form-title">Send a Message</div>
+          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none"><label>Do not fill this out: <input name="bot-field"></label></p>
+            <div class="form-row"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="First and last name" required></div>
+            <div class="form-row"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="your@email.com" required></div>
+            <div class="form-row"><label for="reason">Reason for Contact</label>
+              <select id="reason" name="reason" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="guest">Guest Submission</option>
+                <option value="sponsorship">Sponsorship / Partnership</option>
+                <option value="media">Media / Press Inquiry</option>
+                <option value="listener">Listener Message</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us what is on your mind..." required></textarea></div>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="brand-rule"></div>
+<section id="newsletter" class="nl-strip"><div class="nl-strip-inner reveal"><h2 class="nl-title">Dispatches</h2><p class="nl-sub">From the Path</p><p class="nl-body">A personal letter from Dan every time a new episode drops. What he is actually thinking that week, a moment that did not make the final cut, and a direct line to shape the show.</p><form class="nl-form" action="https://app.kit.com/forms/9257743/subscriptions" method="POST" target="_blank"><input type="email" name="email_address" class="nl-input" placeholder="Your email address" required autocomplete="email"><button type="submit" class="nl-btn">Join the List</button></form><p class="nl-note">No spam. No fluff. Unsubscribe anytime.</p></div></section>
+<div class="brand-rule"></div>
+<footer><div class="footer-inner"><div class="footer-top"><div><span class="footer-wordmark">The Rugged Path</span><span class="footer-tagline">Raw Faith. Real Stories.</span></div><div class="footer-col"><div class="footer-col-title">Navigate</div><ul><li><a href="/index.html">Home</a></li><li><a href="/episodes.html">Episodes</a></li><li><a href="/about.html">About the Show</a></li><li><a href="/about-the-host.html">About Dan</a></li><li><a href="/contact.html">Contact</a></li></ul></div><div class="footer-col"><div class="footer-col-title">Listen On</div><ul><li><a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener">Apple Podcasts</a></li><li><a href="https://open.spotify.com/show/theruggedpath" target="_blank" rel="noopener">Spotify</a></li><li><a href="https://www.youtube.com/@theruggedpathpodcast" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://rumble.com/user/The_Rugged_Path_Podcast" target="_blank" rel="noopener">Rumble</a></li><li><a href="https://www.podbean.com/pw/pbblog-zs6j6-151d063" target="_blank" rel="noopener">Podbean</a></li></ul></div></div><div class="footer-bottom"><span class="footer-copy">&copy; 2026 The Rugged Path. All rights reserved.</span><span class="footer-copy">Hosted by Dan Black</span></div></div></footer>
+<script>var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");obs.unobserve(x.target);}});},{threshold:0.08,rootMargin:"0px 0px -28px 0px"});document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el);});</script>
+<script src="/js/nav-include.js"></script>
+</body>
+</html>

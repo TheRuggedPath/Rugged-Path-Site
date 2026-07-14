@@ -1,0 +1,954 @@
+<!-- FILENAME: justin-koch.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/css/nav.css">
+  <title>Justin Koch: The Green Beret Who Had God and Lost Himself Anyway | The Rugged Path</title>
+  <meta name="description" content="Retired Green Beret Justin Koch spent two decades compartmentalizing grief behind SF deployments and a career made into an idol. Raw faith. Real story." />
+  <meta property="og:title" content="Justin Koch: The Green Beret Who Had God and Lost Himself Anyway | The Rugged Path" />
+  <meta property="og:description" content="Retired Green Beret Justin Koch spent two decades compartmentalizing grief behind SF deployments and a career made into an idol. Raw faith. Real story." />
+  <meta property="og:image" content="/images/justin-koch.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #ab9477;
+      --brand-lt: #c8b090;
+      --bg: #0d0d0f;
+      --bg2: #121110;
+      --bg3: #1a1816;
+      --cream: #f0ebe0;
+      --cream-mid: #c8bfaa;
+      --cream-dim: #6b5f50;
+      --border: rgba(171,148,119,0.12);
+      --border2: rgba(171,148,119,0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/images/justin-koch.jpg');
+      background-size: cover;
+      background-position: center top;
+      transform: scale(1.04);
+      transition: transform 8s ease-out;
+    }
+
+    .hero-bg.loaded { transform: scale(1); }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(13,13,15,0.25) 0%,
+        rgba(13,13,15,0.3) 40%,
+        rgba(13,13,15,0.82) 75%,
+        rgba(13,13,15,0.97) 100%
+      );
+    }
+
+    /* Reticle SVG */
+    .hero-reticle {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 4.5rem;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--brand);
+      opacity: 0.5;
+    }
+
+    .hero-name {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.05;
+      color: var(--brand);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-hook {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      line-height: 1.3;
+      margin-bottom: 1.4rem;
+      max-width: 680px;
+    }
+
+    .hero-oneliner {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--cream-mid);
+      max-width: 580px;
+      line-height: 1.65;
+    }
+
+    /* CONTENT GRID */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 3rem;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem;
+    }
+
+    .content-left h1 {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      color: var(--cream);
+      line-height: 1.3;
+      margin-bottom: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .content-summary {
+      font-style: italic;
+      color: var(--cream-mid);
+      margin-bottom: 1.8rem;
+      font-size: 1.05rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      border: 1px solid var(--border2);
+      padding: 0.3rem 0.75rem;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--brand);
+      padding: 0.7rem 1.6rem;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--brand-lt); }
+
+    .btn-ghost {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brand);
+      background: transparent;
+      border: 1px solid var(--border2);
+      padding: 0.7rem 1.6rem;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--brand);
+      color: var(--brand-lt);
+    }
+
+    /* PLAYER CARD */
+    .player-card {
+      position: relative;
+      background: var(--bg3);
+      padding: 2rem;
+    }
+
+    .player-card::before,
+    .player-card::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+    }
+
+    .player-card::before {
+      top: -1px;
+      left: -1px;
+      border-top: 2px solid var(--brand);
+      border-left: 2px solid var(--brand);
+    }
+
+    .player-card::after {
+      bottom: -1px;
+      right: -1px;
+      border-bottom: 2px solid var(--brand);
+      border-right: 2px solid var(--brand);
+    }
+
+    .player-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 1rem;
+    }
+
+    .player-embed {
+      margin-bottom: 1.5rem;
+    }
+
+    .platform-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.3rem;
+    }
+
+    .platform-link {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-mid);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: color 0.2s;
+    }
+
+    .platform-link::before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: var(--brand);
+      flex-shrink: 0;
+    }
+
+    .platform-link:hover { color: var(--brand-lt); }
+
+    /* STORY SECTION */
+    .story-section {
+      background: var(--bg2);
+      padding: 5rem 2.5rem;
+    }
+
+    .section-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.7rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-eyebrow::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border2);
+      max-width: 120px;
+    }
+
+    .story-section p {
+      color: var(--cream-mid);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .pull-quote {
+      border-left: 2px solid var(--brand);
+      padding: 1rem 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .pull-quote p {
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--cream);
+      margin-bottom: 0;
+    }
+
+    /* KEY MOMENTS */
+    .moments-section {
+      background: var(--bg3);
+      padding: 5rem 2.5rem;
+    }
+
+    .moments-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .moments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .moment-card {
+      background: var(--bg2);
+      padding: 1.5rem 1.6rem;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .moment-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 2px;
+      height: 40px;
+      background: var(--brand);
+      opacity: 0.5;
+    }
+
+    .moment-quote {
+      font-style: italic;
+      font-size: 0.97rem;
+      color: var(--cream);
+      line-height: 1.65;
+      margin-bottom: 0.8rem;
+    }
+
+    .moment-attr {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    /* SCRIPTURE */
+    .scripture-section {
+      background: var(--bg2);
+      padding: 5rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .scripture-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .scripture-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin-top: 2rem;
+    }
+
+    .scripture-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .scripture-item:last-child { border-bottom: none; }
+
+    .scripture-ref {
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--brand);
+      letter-spacing: 0.05em;
+      padding-top: 0.15rem;
+      line-height: 1.4;
+    }
+
+    .scripture-text {
+      font-style: italic;
+      color: var(--cream-mid);
+      font-size: 0.97rem;
+      line-height: 1.7;
+    }
+
+    .scripture-note {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      color: var(--cream-dim);
+      margin-top: 0.5rem;
+    }
+
+    /* TOPICS */
+    .topics-section {
+      background: var(--bg);
+      padding: 5rem 2.5rem;
+    }
+
+    .topics-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.6rem;
+      margin-top: 2rem;
+    }
+
+    .topic-item {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      padding: 0.65rem 1rem;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .topic-item:hover {
+      border-color: var(--border2);
+      color: var(--cream-mid);
+    }
+
+    .topic-item::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--brand);
+      flex-shrink: 0;
+    }
+
+    /* NEWSLETTER */
+    #newsletter {
+      background: var(--bg3);
+      padding: 5rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .newsletter-inner {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .newsletter-heading {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .newsletter-heading span {
+      color: var(--brand);
+      display: block;
+    }
+
+    .newsletter-sub {
+      font-style: italic;
+      color: var(--cream-mid);
+      margin: 1rem 0 2rem;
+      font-size: 0.97rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+    }
+
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-right: none;
+      color: var(--cream);
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.1rem;
+      outline: none;
+    }
+
+    .newsletter-form input[type="email"]::placeholder { color: var(--cream-dim); }
+
+    .newsletter-form button {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--brand);
+      border: none;
+      padding: 0.85rem 1.6rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover { background: var(--brand-lt); }
+
+    .no-spam {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--cream-dim);
+      margin-top: 0.9rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 4rem 2.5rem 2.5rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .footer-col-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 1.1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.83rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      text-decoration: none;
+      margin-bottom: 0.55rem;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--brand); }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+
+    .footer-wordmark {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brand);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-copy {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--cream-dim);
+    }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+    @media (max-width: 860px) {
+      .hero-bg {
+        background-image: url('/images/justin-koch.jpg');
+        background-position: center top;
+      }
+
+      .hero-content { padding: 5rem 1.5rem 3.5rem; }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+      }
+
+      .story-section,
+      .moments-section,
+      .scripture-section,
+      .topics-section,
+      #newsletter,
+      footer { padding: 3.5rem 1.5rem; }
+
+      .scripture-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form input[type="email"] { border-right: 1px solid var(--border2); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Reticle SVG -->
+    <svg class="hero-reticle" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="450" x2="1440" y2="450" stroke="rgba(171,148,119,0.12)" stroke-width="1"/>
+      <line x1="900" y1="0" x2="900" y2="900" stroke="rgba(171,148,119,0.10)" stroke-width="1"/>
+      <polygon points="900,438 894,450 900,462 906,450" fill="none" stroke="rgba(171,148,119,0.28)" stroke-width="1"/>
+      <polygon points="888,450 900,444 912,450 900,456" fill="none" stroke="rgba(171,148,119,0.18)" stroke-width="1"/>
+      <line x1="860" y1="450" x2="875" y2="450" stroke="rgba(171,148,119,0.35)" stroke-width="1"/>
+      <line x1="925" y1="450" x2="940" y2="450" stroke="rgba(171,148,119,0.35)" stroke-width="1"/>
+      <line x1="900" y1="410" x2="900" y2="425" stroke="rgba(171,148,119,0.35)" stroke-width="1"/>
+      <line x1="900" y1="475" x2="900" y2="490" stroke="rgba(171,148,119,0.35)" stroke-width="1"/>
+      <text x="910" y="442" font-family="monospace" font-size="9" fill="rgba(171,148,119,0.28)" letter-spacing="1">33.2°N 96.4°W</text>
+      <rect x="80" y="80" width="60" height="60" fill="none" stroke="rgba(171,148,119,0.12)" stroke-width="1"/>
+      <line x1="80" y1="80" x2="95" y2="80" stroke="rgba(171,148,119,0.25)" stroke-width="1"/>
+      <line x1="80" y1="80" x2="80" y2="95" stroke="rgba(171,148,119,0.25)" stroke-width="1"/>
+      <line x1="140" y1="140" x2="125" y2="140" stroke="rgba(171,148,119,0.25)" stroke-width="1"/>
+      <line x1="140" y1="140" x2="140" y2="125" stroke="rgba(171,148,119,0.25)" stroke-width="1"/>
+    </svg>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Episode 007 &nbsp;&middot;&nbsp; June 9, 2026</div>
+      <h2 class="hero-name">Justin Koch</h2>
+      <p class="hero-hook">The Green Beret Who Had God<br>and Lost Himself Anyway</p>
+      <p class="hero-oneliner">Retired Green Beret, certified herbalist, and co-host of the Unconventional Faith podcast. He spent twenty years in the Army, much of that in 3rd Special Forces Group, deployed to Iraq and Afghanistan, and came home carrying grief he would not fully face for another decade.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT GRID -->
+  <div class="content-grid">
+    <div class="content-left reveal">
+      <h1>Justin Koch: Green Beret, Two Decades of Compartments, and the God Who Waited</h1>
+      <p class="content-summary">Justin Koch spent twenty years in the Army, much of that as a Green Beret, and most of his life convinced he had his faith handled. What he could not do was actually let God lead. This episode is the story of a man who compartmentalized everything that hurt, performed everything that was expected, and kept the whole structure standing through willpower, alcohol, and an SF identity that eventually ran out of road.</p>
+      <div class="tags">
+        <span class="tag">Green Beret</span>
+        <span class="tag">Special Forces</span>
+        <span class="tag">Veteran Faith</span>
+        <span class="tag">Combat Grief</span>
+        <span class="tag">Lukewarm Faith</span>
+        <span class="tag">Addiction</span>
+        <span class="tag">Military Identity</span>
+        <span class="tag">Surrender</span>
+        <span class="tag">Christian Podcast</span>
+        <span class="tag">The Rugged Path</span>
+      </div>
+      <div class="btn-row">
+        <a href="https://theruggedpath.podbean.com/e/justin-koch-the-green-beret-who-had-god-and-lost-himself-anyway-the-rugged-path/?token=a5683aa9e881aaa66fce1352f47c929b" target="_blank" rel="noopener" class="btn-primary">Listen on Podbean</a>
+        <a href="/episodes.html" class="btn-ghost">All Episodes</a>
+      </div>
+    </div>
+
+    <div class="content-right reveal">
+      <div class="player-card">
+        <div class="player-label">Listen Now</div>
+        <div class="player-embed">
+          <iframe title="Justin Koch: The Green Beret Who Had God and Lost Himself Anyway | The Rugged Path" allowtransparency="true" height="300" width="100%" style="border: none; min-width: min(100%, 430px);height:300px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=3r4kh-1adf341-pb&from=pb6admin&square=1&share=1&download=1&rtl=0&fonts=Arial&skin=1b1b1b&font-color=auto&logo_link=episode_page&btn-skin=666666&size=300" loading="lazy" allowfullscreen=""></iframe>
+        </div>
+        <div class="platform-links">
+          <a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener" class="platform-link">Apple Podcasts</a>
+          <a href="https://open.spotify.com/show/2b2hgclLtwxCrXdXYvfIuU?si=0a94d59837314609" target="_blank" rel="noopener" class="platform-link">Spotify</a>
+          <a href="https://www.youtube.com/@theruggedpathpodcast" target="_blank" rel="noopener" class="platform-link">YouTube</a>
+          <a href="https://rumble.com/user/The_Rugged_Path_Podcast" target="_blank" rel="noopener" class="platform-link">Rumble</a>
+          <!-- Watch on YouTube — paste direct episode URL below once live -->
+          <a href="https://youtu.be/8omuGcbpCsI" target="_blank" rel="noopener" class="btn-ghost" style="margin-top:0.5rem;text-align:center;">Watch on YouTube</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY SECTION -->
+  <section class="story-section">
+    <div class="section-inner reveal">
+      <div class="section-eyebrow">The Story</div>
+      <p>Justin Koch grew up in Montgomery, Texas, the son of parents who found faith through a neighborhood pastor who knocked on their door while riding a bicycle. Justin was saved at thirteen and almost immediately started living two lives. Church on Sundays, the world everywhere else. He had his salvation, and somewhere in the back of his mind he decided the ticket was punched and the rest was his to spend. It was not a dramatic rebellion. It was a quiet drift.</p>
+      <p>A year at The Master's College in Santa Clarita, California was supposed to straighten him out. It did the opposite. He found the campus culture performative, the Christianity suffocating, and the people more interested in demonstrating righteousness than extending it. He came home with incompletes, a chip on his shoulder, and a ready-made excuse to keep his distance from God. What followed were his self-described lost years. He eventually returned, moved back under his parents' conditions, and went to church not because he wanted to but because he had to. For the first time, he started being honest with God. He married Heather at a courthouse while still in basic training greens.</p>
+
+      <div class="pull-quote">
+        <p>"The leadership and responsibility of your life is not up to you. And as soon as you let that go, there is a freedom in it that will go beyond your understanding."</p>
+      </div>
+
+      <p>The Army gave Justin almost everything he was looking for and none of what he actually needed. He became a Cavalry Scout, survived Korea and a fourteen-month deployment to Iraq, and ground his way through Special Forces Assessment and Selection. He deployed to Afghanistan with 3rd Special Forces Group in 2013. His teammate Steven was killed in an attack on their outpost. Justin ran to the tower expecting to treat an infantry casualty and found Steven instead. He triaged the other wounded, managed the mass casualty, and shoved all of it down somewhere deep. He had been doing that his whole life.</p>
+      <p>He and Heather lost a daughter to a pregnancy complication. Scout came next, premature, four pounds, weeks in the NICU. When Justin retired from 3rd Group at twenty years, the panic attacks came daily. He had nothing left to hold the structure up. What came out the other side was not a program. It was surrender. He and fellow retired Green Beret Tom Brigham had been going verse by verse through the Bible together for years, honest enough to say out loud when they did not understand something they had heard a hundred times. A friend told them to record it. That became the Unconventional Faith podcast. Justin Koch is now at peace with the one thing he spent forty years trying to avoid: not being in control.</p>
+    </div>
+  </section>
+
+  <!-- KEY MOMENTS -->
+  <section class="moments-section">
+    <div class="moments-inner">
+      <div class="section-eyebrow reveal">From This Episode</div>
+      <div class="moments-grid">
+        <div class="moment-card reveal">
+          <p class="moment-quote">"I knew I had saving faith. I was like, well, I got mine. Now I'm gonna go do whatever I want, try to be cool, try to experience life — which was experiencing sin and experiencing death."</p>
+          <div class="moment-attr">Justin Koch</div>
+        </div>
+        <div class="moment-card reveal">
+          <p class="moment-quote">"It was wild. I'll never forget it. The slap, the physical slap in my face, I felt it whenever I was going up there expecting to render aid to one of the infantry guys. And I look up and it's Steve."</p>
+          <div class="moment-attr">Justin Koch — on losing his teammate in Afghanistan</div>
+        </div>
+        <div class="moment-card reveal">
+          <p class="moment-quote">"I remember looking at her when she showed me the stick. I was like, I should be happy right now. I should be joyful. And I was like, I don't feel anything."</p>
+          <div class="moment-attr">Justin Koch — on emotional numbness after years of buried grief</div>
+        </div>
+        <div class="moment-card reveal">
+          <p class="moment-quote">"I'm just a brush. A brush cannot create a masterpiece. It needs an artist."</p>
+          <div class="moment-attr">Justin Koch — on surrender</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPTURE -->
+  <section class="scripture-section">
+    <div class="scripture-inner">
+      <div class="section-eyebrow reveal">Scripture</div>
+      <div class="scripture-list">
+        <div class="scripture-item reveal">
+          <div class="scripture-ref">Luke 15:20</div>
+          <div>
+            <p class="scripture-text">"But while he was still a long way off, his father saw him and was filled with compassion for him; he ran to his son, threw his arms around him and kissed him."</p>
+            <p class="scripture-note">Justin names his lost years directly after the Prodigal Son parable — and reminds us it was the father's love that made the return possible, not the son's decision-making.</p>
+          </div>
+        </div>
+        <div class="scripture-item reveal">
+          <div class="scripture-ref">Matthew 7:23</div>
+          <div>
+            <p class="scripture-text">"Then I will tell them plainly, 'I never knew you. Away from me, you evildoers!'"</p>
+            <p class="scripture-note">Justin cites this verse when describing his early lukewarm faith — the hard truth that performing religion is not the same as a living relationship with Jesus.</p>
+          </div>
+        </div>
+        <div class="scripture-item reveal">
+          <div class="scripture-ref">Revelation 3:16</div>
+          <div>
+            <p class="scripture-text">"So, because you are lukewarm — neither hot nor cold — I am about to spit you out of my mouth."</p>
+            <p class="scripture-note">The verse that frames the entire first half of Justin's story: a man who believed the right things and never fully gave his heart over — which Scripture names as one of the most dangerous places to be.</p>
+          </div>
+        </div>
+        <div class="scripture-item reveal">
+          <div class="scripture-ref">Philippians 4:7</div>
+          <div>
+            <p class="scripture-text">"And the peace of God, which transcends all understanding, will guard your hearts and your minds in Christ Jesus."</p>
+            <p class="scripture-note">Justin echoes this verse in his own words: the peace that surpassed his understanding only arrived when he stopped trying to manufacture it himself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="topics-section">
+    <div class="topics-inner">
+      <div class="section-eyebrow reveal">Topics Covered</div>
+      <div class="topics-grid reveal">
+        <div class="topic-item">Double life and lukewarm faith</div>
+        <div class="topic-item">The Master's College and church culture</div>
+        <div class="topic-item">Imposter syndrome across life stages</div>
+        <div class="topic-item">SF Assessment and Selection</div>
+        <div class="topic-item">Combat deployment to Iraq</div>
+        <div class="topic-item">Afghanistan with 3rd Special Forces Group</div>
+        <div class="topic-item">Death of SF teammate Steven</div>
+        <div class="topic-item">Grief compartmentalization</div>
+        <div class="topic-item">Infertility, loss, and pregnancy</div>
+        <div class="topic-item">Scout's premature birth and NICU</div>
+        <div class="topic-item">Alcohol and functional suppression</div>
+        <div class="topic-item">Career as an idol</div>
+        <div class="topic-item">Retirement identity collapse</div>
+        <div class="topic-item">Panic attacks and the floor dropping out</div>
+        <div class="topic-item">Cleaner Living and herbalism</div>
+        <div class="topic-item">Unconventional Faith podcast</div>
+        <div class="topic-item">Surrender as active participation</div>
+        <div class="topic-item">Faith as action, not feeling</div>
+        <div class="topic-item">Marriage under sustained pressure</div>
+        <div class="topic-item">Life as selection</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div class="newsletter-inner reveal">
+      <h2 class="newsletter-heading">Dispatches <span>From the Path</span></h2>
+      <p class="newsletter-sub">A personal letter from Dan Black every time a new episode drops. No polish. No formula. Just what's real.</p>
+      <form class="newsletter-form" action="https://app.kit.com/forms/9257743/subscriptions" method="post" target="_blank">
+        <input type="email" name="email_address" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="no-spam">No spam. No marketing. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-col-label">Navigate</div>
+        <a href="/index.html">Home</a>
+        <a href="/episodes.html">Episodes</a>
+        <a href="/about.html">About</a>
+        <a href="/about-the-host.html">Host</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-label">Listen On</div>
+        <a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener">Apple Podcasts</a>
+        <a href="https://open.spotify.com/show/2b2hgclLtwxCrXdXYvfIuU" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://www.youtube.com/@theruggedpathpodcast" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://rumble.com/user/The_Rugged_Path_Podcast" target="_blank" rel="noopener">Rumble</a>
+        <a href="https://www.podbean.com/pw/pbblog-zs6j6-151d063" target="_blank" rel="noopener">Podbean</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-wordmark">The Rugged Path</span>
+      <p class="footer-copy">Raw Faith. Real Stories. &copy; 2026 The Rugged Path Podcast.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', function() {
+      var h = document.getElementById('heroBg');
+      if (h) h.classList.add('loaded');
+    });
+  </script>
+  <script>
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+  </script>
+  <script src="/js/nav-include.js"></script>
+
+</body>
+</html>
