@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<title>Dispatches from the Path — The Rugged Path</title>
+<meta name="description" content="Join Dispatches from the Path, a newsletter from The Rugged Path — direct, raw, no polish, sent every other week." />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Barlow+Condensed:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand:      #ab9477;
+    --brand-lt:   #c8b090;
+    --bg:         #0d0d0f;
+    --bg2:        #121110;
+    --bg3:        #1a1816;
+    --cream:      #f0ebe0;
+    --cream-mid:  #c8bfaa;
+    --cream-dim:  #6b5f50;
+    --border:     rgba(171,148,119,0.12);
+    --border2:    rgba(171,148,119,0.25);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Lora', Georgia, serif;
+    min-height: 100vh;
+    padding: 0 0 80px;
+  }
+
+  /* ── HEADER / HERO ── */
+  .header {
+    position: relative;
+    min-height: 46vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border2);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/Rugged_Path_Hero_Image_New_Site.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(13,13,15,0.55) 0%, rgba(13,13,15,0.45) 40%, rgba(13,13,15,0.85) 85%, var(--bg) 100%);
+  }
+  .reticle { position: absolute; inset: 0; pointer-events: none; }
+  .header-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 48px 24px 40px;
+  }
+  .show-name {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(22px, 5vw, 32px);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--brand-lt);
+    text-transform: uppercase;
+    line-height: 1;
+    position: relative;
+  }
+  .show-tagline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    color: var(--cream-dim);
+    text-transform: uppercase;
+    margin-top: 8px;
+    position: relative;
+  }
+  .header-divider {
+    width: 60px; height: 1px;
+    background: var(--brand);
+    margin: 20px auto;
+    opacity: 0.5;
+    position: relative;
+  }
+  .header-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(13px, 3vw, 16px);
+    letter-spacing: 0.25em;
+    color: var(--cream-mid);
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .content {
+    max-width: 620px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  .headline {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(24px, 5vw, 34px);
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+
+  .body-copy p {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--cream-mid);
+    text-align: left;
+  }
+  .body-copy p + p { margin-top: 16px; }
+  .body-copy strong { color: var(--cream); font-weight: 500; }
+
+  .cadence-note {
+    margin-top: 28px;
+    padding: 16px;
+    border-left: 2px solid var(--brand);
+    background: rgba(171,148,119,0.05);
+    text-align: left;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: var(--cream-dim);
+    line-height: 1.6;
+  }
+
+  .cta-wrap {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .btn-signup {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--brand);
+    border: none;
+    padding: 18px 52px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-signup:hover { background: var(--brand-lt); }
+  .btn-signup:active { transform: scale(0.98); }
+
+  .cta-subnote {
+    margin-top: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--cream-dim);
+  }
+
+  .divider {
+    max-width: 620px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+  }
+  .divider hr {
+    border: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-note {
+    max-width: 620px;
+    margin: 32px auto 0;
+    padding: 0 24px;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    color: var(--cream-dim);
+    letter-spacing: 0.04em;
+  }
+  .footer-note a { color: var(--brand-lt); text-decoration: none; }
+  .footer-note a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <svg class="reticle" viewBox="0 0 1440 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <line x1="0" y1="450" x2="1440" y2="450" stroke="rgba(171,148,119,0.14)" stroke-width="1" stroke-dasharray="6 10"/>
+    <line x1="1080" y1="0" x2="1080" y2="900" stroke="rgba(171,148,119,0.12)" stroke-width="1" stroke-dasharray="6 10"/>
+    <line x1="360" y1="0" x2="360" y2="900" stroke="rgba(171,148,119,0.1)" stroke-width="1" stroke-dasharray="6 10"/>
+    <polygon points="1070,440 1090,440 1080,458" fill="rgba(171,148,119,0.3)"/>
+    <text x="1100" y="430" font-family="Barlow Condensed, sans-serif" font-size="13" letter-spacing="2" fill="rgba(171,148,119,0.28)">36.9N 79.0W</text>
+  </svg>
+  <div class="header-content">
+    <div class="show-name">The Rugged Path</div>
+    <div class="show-tagline">Raw Faith. Real Stories.</div>
+    <div class="header-divider"></div>
+    <div class="header-title">Dispatches from the Path</div>
+  </div>
+</div>
+
+<div class="content">
+  <h1 class="headline">Faith conversations the church usually leaves out — straight to your inbox.</h1>
+
+  <div class="body-copy">
+    <p>Dispatches from the Path is the newsletter side of the show. No polish, no formulas, just a personal note from Dan every other week, tied to whatever episode just dropped.</p>
+    <p>You'll get the story behind the story, a few things that didn't make the final cut, and an honest word about whatever Dan's been sitting with that week. If the podcast is the long conversation, this is the follow-up text from a friend.</p>
+  </div>
+
+  <div class="cadence-note">
+    Sent every other week, aligned with new episodes. Real talk, not a marketing blast. Unsubscribe anytime.
+  </div>
+
+  <div class="cta-wrap">
+    <a href="https://app.kit.com/forms/9257743/subscriptions" target="_blank" rel="noopener" class="btn-signup">Subscribe Now</a>
+    <div class="cta-subnote">Free. Takes about ten seconds.</div>
+  </div>
+</div>
+
+<div class="divider"><hr></div>
+
+<div class="footer-note">
+  Prefer to listen first? <a href="/episodes.html">Check out the episodes</a>.
+</div>
+
+</body>
+</html>
