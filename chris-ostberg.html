@@ -1,0 +1,1036 @@
+<!-- FILENAME: chris-ostberg.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/nav.css">
+  <title>Chris Ostberg: A Promise to God He Broke for 20 Years | The Rugged Path</title>
+  <meta name="description" content="A 16-year Army veteran opens up about a promise he made to God before the invasion of Iraq, the affair that cost him his marriage and career, and the Facebook message that brought him back to faith." />
+  <meta property="og:title" content="Chris Ostberg: A Promise to God He Broke for 20 Years | The Rugged Path" />
+  <meta property="og:description" content="Chris Ostberg promised God he'd go to church every Sunday if he survived the invasion of Iraq. He survived. He didn't go back for 20 years." />
+  <meta property="og:image" content="/images/chris-ostberg.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theruggedpathpodcast.com/chris-ostberg.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:      #ab9477;
+      --brand-lt:   #c8b090;
+      --bg:         #0d0d0f;
+      --bg2:        #121110;
+      --bg3:        #1a1816;
+      --cream:      #f0ebe0;
+      --cream-mid:  #c8bfaa;
+      --cream-dim:  #6b5f50;
+      --border:     rgba(171,148,119,0.12);
+      --border2:    rgba(171,148,119,0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 80px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/images/chris-ostberg.jpg');
+      background-size: cover;
+      background-position: center top;
+      transform: scale(1.04);
+      transition: transform 8s ease-out;
+    }
+
+    .hero-bg.loaded { transform: scale(1); }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(13,13,15,0.25) 0%,
+        rgba(13,13,15,0.45) 40%,
+        rgba(13,13,15,0.82) 72%,
+        rgba(13,13,15,0.97) 100%
+      );
+    }
+
+    /* Reticle SVG overlay */
+    .hero-reticle {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--brand);
+    }
+
+    .hero-guest-name {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(42px, 6vw, 72px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--brand);
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+
+    .hero-hook {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: clamp(24px, 3.5vw, 40px);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero-oneliner {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--cream-mid);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+
+    /* ── CONTENT GRID ── */
+    .content-grid-wrap {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 72px 40px;
+    }
+
+    .content-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .episode-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: clamp(22px, 2.8vw, 30px);
+      color: var(--cream);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    .episode-summary {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--cream-mid);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+
+    .tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      border: 1px solid var(--border2);
+      padding: 4px 12px;
+      border-radius: 2px;
+    }
+
+    .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .btn-primary {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: var(--brand);
+      color: var(--bg);
+      padding: 13px 28px;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-lt);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: 1px solid var(--border2);
+      color: var(--cream-mid);
+      padding: 13px 28px;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+
+    /* Player card */
+    .player-card {
+      position: relative;
+      background: var(--bg3);
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+
+    .player-card::before,
+    .player-card::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-color: var(--brand);
+      border-style: solid;
+    }
+
+    .player-card::before {
+      top: -1px; left: -1px;
+      border-width: 2px 0 0 2px;
+    }
+
+    .player-card::after {
+      bottom: -1px; right: -1px;
+      border-width: 0 2px 2px 0;
+    }
+
+    .player-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 18px;
+    }
+
+    .player-embed {
+      margin-bottom: 28px;
+    }
+
+    .platform-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      margin-bottom: 12px;
+    }
+
+    .platform-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .platform-link {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-mid);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.2s;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .platform-link:last-child { border-bottom: none; }
+    .platform-link:hover { color: var(--brand); }
+
+    .platform-link svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    /* ── STORY SECTION ── */
+    .story-section {
+      background: var(--bg);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--brand);
+      flex-shrink: 0;
+    }
+
+    .story-section p {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      color: var(--cream-mid);
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+
+    .pull-quote {
+      border-left: 2px solid var(--brand);
+      padding: 4px 0 4px 28px;
+      margin: 48px 0;
+    }
+
+    .pull-quote p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--cream);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* ── KEY MOMENTS ── */
+    .moments-section {
+      background: var(--bg3);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .moments-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .moments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .quote-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 32px 28px;
+      position: relative;
+      transition: border-color 0.25s;
+    }
+
+    .quote-card:hover { border-color: var(--border2); }
+
+    .quote-card::before {
+      content: '\201C';
+      font-family: 'Lora', serif;
+      font-size: 64px;
+      line-height: 1;
+      color: var(--brand);
+      opacity: 0.3;
+      position: absolute;
+      top: 16px; left: 20px;
+    }
+
+    .quote-card blockquote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 15.5px;
+      color: var(--cream-mid);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      padding-top: 18px;
+    }
+
+    .quote-attribution {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    /* ── SCRIPTURE ── */
+    .scripture-section {
+      background: var(--bg2);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .scripture-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .scripture-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .scripture-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--brand);
+      padding: 24px 24px 24px 28px;
+    }
+
+    .scripture-ref {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+
+    .scripture-desc {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      color: var(--cream-dim);
+      line-height: 1.65;
+    }
+
+    /* ── TOPICS ── */
+    .topics-section {
+      background: var(--bg);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .topics-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 48px;
+    }
+
+    .topic-item {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: var(--cream-dim);
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .topic-item::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--brand);
+      flex-shrink: 0;
+    }
+
+    /* ── NEWSLETTER ── */
+    #newsletter {
+      background: var(--bg3);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .newsletter-inner {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .newsletter-heading {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(26px, 3.5vw, 36px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .newsletter-heading span {
+      display: block;
+      color: var(--brand);
+    }
+
+    .newsletter-sub {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: var(--cream-mid);
+      margin-bottom: 40px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      margin-bottom: 14px;
+    }
+
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-right: none;
+      color: var(--cream);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      padding: 14px 18px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .newsletter-form input[type="email"]:focus {
+      border-color: var(--brand);
+    }
+
+    .newsletter-form input[type="email"]::placeholder {
+      color: var(--cream-dim);
+    }
+
+    .newsletter-form button {
+      background: var(--brand);
+      color: var(--bg);
+      border: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 14px 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover { background: var(--brand-lt); }
+
+    .newsletter-nospam {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--cream-dim);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 64px 40px 40px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-col-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      color: var(--cream-dim);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--brand); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-wordmark {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    .footer-copy {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--cream-dim);
+    }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .content-grid { grid-template-columns: 1fr; }
+      .content-grid-wrap { padding: 56px 20px; }
+      .story-section, .moments-section, .scripture-section, .topics-section, #newsletter { padding: 72px 20px; }
+      footer { padding: 56px 20px 32px; }
+      .hero-content { padding: 0 20px; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form input[type="email"] { border-right: 1px solid var(--border2); border-bottom: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .hero-bg { background-image: url('/images/chris-ostberg-mobile.jpg'); }
+    }
+
+    @media (max-width: 540px) {
+      .hero-guest-name { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Reticle SVG -->
+    <svg class="hero-reticle" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- horizontal dashed line -->
+      <line x1="0" y1="410" x2="1440" y2="410" stroke="rgba(171,148,119,0.13)" stroke-width="1" stroke-dasharray="6 14" />
+      <!-- vertical dashed line -->
+      <line x1="720" y1="0" x2="720" y2="820" stroke="rgba(171,148,119,0.10)" stroke-width="1" stroke-dasharray="6 14" />
+      <!-- center circle -->
+      <circle cx="720" cy="410" r="60" stroke="rgba(171,148,119,0.18)" stroke-width="1" fill="none" />
+      <circle cx="720" cy="410" r="6" stroke="rgba(171,148,119,0.35)" stroke-width="1" fill="none" />
+      <!-- triangle markers -->
+      <polygon points="720,340 712,356 728,356" fill="rgba(171,148,119,0.25)" />
+      <polygon points="720,480 712,464 728,464" fill="rgba(171,148,119,0.25)" />
+      <polygon points="648,410 664,402 664,418" fill="rgba(171,148,119,0.20)" />
+      <polygon points="792,410 776,402 776,418" fill="rgba(171,148,119,0.20)" />
+      <!-- coordinate label -->
+      <text x="730" y="395" font-family="'Barlow Condensed', sans-serif" font-size="10" letter-spacing="2" fill="rgba(171,148,119,0.30)">33.1584° N  97.0641° W</text>
+      <!-- corner bracket top-left -->
+      <path d="M 60 80 L 60 120 M 60 80 L 100 80" stroke="rgba(171,148,119,0.22)" stroke-width="1" fill="none" />
+      <!-- corner bracket bottom-right -->
+      <path d="M 1380 740 L 1380 700 M 1380 740 L 1340 740" stroke="rgba(171,148,119,0.22)" stroke-width="1" fill="none" />
+    </svg>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Episode 013 &nbsp;·&nbsp; September 1, 2026</div>
+      <h1 class="hero-guest-name">Chris Ostberg</h1>
+      <div class="hero-hook">A Promise to God He Broke for 20 Years</div>
+      <p class="hero-oneliner">Chris Ostberg is a 16-year Army veteran, from 82nd Airborne infantryman to Civil Affairs officer, who broke a promise to God for two decades before a single Facebook message brought him back to both faith and love.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT GRID -->
+  <section class="content-grid-wrap">
+    <div class="content-grid">
+
+      <!-- LEFT COLUMN -->
+      <div>
+        <h2 class="episode-title reveal">Chris Ostberg: A Promise to God He Broke for 20 Years</h2>
+        <p class="episode-summary reveal">
+          Chris Ostberg sits down with Dan Black to trace a winding, unflinchingly honest path from a homeschooled childhood in small-town Massachusetts through 16 years of Army service across the 82nd Airborne, Civil Affairs, and multiple war zones, to an affair that ended his career and his first marriage, to roofing houses on Fort Bragg as a form of unexpected grace, to reconnecting with a high-school-era girlfriend who brought him back to church and eventually became his wife. This episode is especially notable for Chris's candor about doubt itself: he's honest that even now, he isn't always sure he has "enough" faith.
+        </p>
+
+        <div class="tags-wrap reveal">
+          <span class="tag">Military</span>
+          <span class="tag">Veteran</span>
+          <span class="tag">Army</span>
+          <span class="tag">82nd Airborne</span>
+          <span class="tag">Civil Affairs</span>
+          <span class="tag">Infidelity</span>
+          <span class="tag">Divorce</span>
+          <span class="tag">Faith</span>
+          <span class="tag">Redemption</span>
+          <span class="tag">Marriage</span>
+          <span class="tag">Christian Testimony</span>
+          <span class="tag">Doubt</span>
+        </div>
+
+        <div class="btn-row reveal">
+          <a href="https://theruggedpath.podbean.com/e/chris-ostberg-a-promise-to-god-he-broke-for-20-years-the-rugged-path/?token=7d71ad11b43de2276d14a4f2e5869adc" target="_blank" rel="noopener" class="btn-primary">Listen on Podbean</a>
+          <!-- PASTE YOUTUBE URL HERE -->
+          <a href="https://youtu.be/9yu73dxe1zk" target="_blank" rel="noopener" class="btn-ghost">Watch on YouTube</a>
+          <a href="/episodes.html" class="btn-ghost">All Episodes</a>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: PLAYER CARD -->
+      <div>
+        <div class="player-card reveal">
+          <div class="player-label">Now Playing</div>
+          <div class="player-embed">
+            <iframe title="Chris Ostberg: A Promise to God He Broke for 20 Years | The Rugged Path" allowtransparency="true" height="300" width="100%" style="border: none; min-width: min(100%, 430px);height:300px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=mqwrp-1b49387-pb&from=pb6admin&square=1&share=1&download=1&rtl=0&fonts=Arial&skin=1b1b1b&font-color=auto&logo_link=episode_page&btn-skin=666666&size=300" loading="lazy" allowfullscreen=""></iframe>
+          </div>
+
+          <div class="platform-label">Also available on</div>
+          <div class="platform-links">
+            <a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener" class="platform-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 4.5c2.81 0 5.09 2.28 5.09 5.09 0 2.31-1.55 4.28-3.67 4.88v4.03c0 .77-.63 1.4-1.4 1.4h-.05c-.77 0-1.4-.63-1.4-1.4v-4.03C8.46 13.87 6.91 11.9 6.91 9.59 6.91 6.78 9.19 4.5 12 4.5zm0 2.14c-1.63 0-2.95 1.32-2.95 2.95S10.37 12.54 12 12.54s2.95-1.32 2.95-2.95S13.63 6.64 12 6.64z"/></svg>
+              Apple Podcasts
+            </a>
+            <a href="https://open.spotify.com/episode/6x5MXSMgQiJrJqkHmsCprd?si=eQSVq0A1QxettC7GX3cqUg" target="_blank" rel="noopener" class="platform-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.28c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.54-1.26.24-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-.96-.12-1.08-.6-.12-.48.12-.96.6-1.08 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.18 1.2zm.12-3.36c-3.84-2.28-10.2-2.52-13.86-1.38-.54.18-1.08-.12-1.26-.66-.18-.54.12-1.08.66-1.26 4.2-1.26 11.1-1.02 15.48 1.62.48.3.66.96.36 1.44-.3.42-.96.6-1.38.24z"/></svg>
+              Spotify
+            </a>
+            <a href="https://youtu.be/9yu73dxe1zk" target="_blank" rel="noopener" class="platform-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.5V8.5L15.5 12l-5.75 3.5z"/></svg>
+              YouTube
+            </a>
+            <a href="https://rumble.com/v7ev99e-chris-ostberg-a-promise-to-god-he-broke-for-20-years-the-rugged-path.html" target="_blank" rel="noopener" class="platform-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm4.5 16.5l-6-3.5V7.5L16.5 11v5.5z"/></svg>
+              Rumble
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="story-section">
+    <div class="section-inner">
+      <div class="eyebrow reveal">The Story</div>
+
+      <p class="reveal">
+        Chris Ostberg grew up homeschooled in a small town in Massachusetts, the son of a Harvard-educated mother and an architect father who traveled overseas frequently. His childhood faith, shaped by a small Episcopalian church, always felt more like a set of rules than a relationship, something he could read in Leviticus and conclude didn't leave much room for anyone. He enlisted in the Army at 18 wanting to be an infantryman, rose quickly through the ranks of the 82nd Airborne, and led a squad into the 2003 invasion of Iraq at 21 years old, but not before making a private, half-serious bargain with God on a rooftop in Kuwait, promising to go to church every Sunday if he survived. He survived. He did not go to church again for twenty years.
+      </p>
+
+      <div class="pull-quote reveal">
+        <p>"If I make it through the war, I'll go to church every Sunday."</p>
+      </div>
+
+      <p class="reveal">
+        What followed was a long stretch of disillusionment and self-inflicted damage. Chris came home from Iraq uncertain what the war had actually accomplished, left active duty for a relationship with a woman he barely knew, and spent sixteen years married to her marked by heavy drinking and repeated infidelity. He later transitioned into Civil Affairs, learned Arabic, and deployed again during the fight against ISIS, but an affair with a servicemember he worked alongside ended both his marriage and, after a lengthy investigation, his sixteen-year Army career, just short of retirement. He describes the identity collapse that followed as the hardest thing that ever happened to him, and in the same breath, the best.
+      </p>
+
+      <p class="reveal">
+        Struggling to find steady work, Chris took a job roofing historic buildings on Fort Bragg, a season he found humbling and unexpectedly healing. It was during this stretch of rebuilding that his life pivoted again. On the day his marriage effectively ended, he looked up a girlfriend from his early twenties on Facebook and noticed she had been posting about her church. He sent her a simple message, "Hey, I see you still like Jesus," and she wrote back immediately, astonished he was even alive. They reconnected, and during a nine-month deployment to Somalia that followed, Chris began quietly re-engaging with his faith, watching sermons and reading scripture largely so he could talk it through with her.
+      </p>
+
+      <div class="pull-quote reveal">
+        <p>"Hey, I see you still like Jesus."</p>
+      </div>
+
+      <p class="reveal">
+        Near the end of that deployment, in a moment of fear rather than conviction, Chris nearly destroyed the relationship, telling her he would never share her faith or build a family with her, even though he had already decided in private that was exactly what he wanted. They reconciled. He came home, they married, and roughly two years before this conversation, he was baptized, not as a single dramatic turning point, but as the next honest step in a faith he had spent two decades avoiding.
+      </p>
+
+      <p class="reveal">
+        Today Chris works as a civilian connected to the military at Fort Bragg, raising a family with his wife. He remains unusually candid about the parts of faith that still don't come easily: a persistent uncertainty about whether he has enough of it, a gap between who he is at work and who he is at home, and an ongoing wrestling match between reading scripture for knowledge and actually living it out as wisdom.
+      </p>
+    </div>
+  </section>
+
+  <!-- KEY MOMENTS -->
+  <section class="moments-section">
+    <div class="moments-inner">
+      <div class="eyebrow reveal">From This Episode</div>
+
+      <div class="moments-grid">
+        <div class="quote-card reveal">
+          <blockquote>"God doesn't care about this."</blockquote>
+          <div class="quote-attribution">— During his first deployment to Iraq</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"Maybe that's the first time I really started thinking about like, 'Oh, I'm not actually like a good person.' Whatever that means. Like I'm pretty sure I'm not that."</blockquote>
+          <div class="quote-attribution">— After his separation from the Army</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"I didn't know you were alive."</blockquote>
+          <div class="quote-attribution">— His now-wife's reply to his Facebook message</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"There's absolutely a question about whether I have enough faith."</blockquote>
+          <div class="quote-attribution">— On living with honest doubt</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"It had to have been part of a plan."</blockquote>
+          <div class="quote-attribution">— Looking back on his separation from the Army</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"That's where you just have to be humble. You just do good at this thing that I think is the right thing to do."</blockquote>
+          <div class="quote-attribution">— Chris Ostberg</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPTURE -->
+  <section class="scripture-section">
+    <div class="scripture-inner">
+      <div class="eyebrow reveal">Scripture</div>
+
+      <div class="scripture-grid">
+        <div class="scripture-card reveal">
+          <div class="scripture-ref">Leviticus</div>
+          <div class="scripture-desc">Referenced repeatedly by Chris as the source of his early, legalistic reading of scripture growing up, a rules-focused view of faith that made it feel transactional rather than relational.</div>
+        </div>
+
+        <div class="scripture-card reveal">
+          <div class="scripture-ref">Hebrews</div>
+          <div class="scripture-desc">Referenced as what his wife was reading regarding Jesus being "seated at the right hand" and becoming "higher than the angels," which sparked a discussion between them about the Trinity.</div>
+        </div>
+
+        <div class="scripture-card reveal">
+          <div class="scripture-ref">The Prodigal Son</div>
+          <div class="scripture-desc">Alluded to by Dan, connecting Chris's own framing of his story, leaving, wandering, and returning to find God had been there the whole time, to the parable of the father who never stopped waiting.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="topics-section">
+    <div class="topics-inner">
+      <div class="eyebrow reveal">Topics Covered</div>
+
+      <div class="topics-grid">
+        <div class="topic-item reveal">A homeschooled childhood in Massachusetts</div>
+        <div class="topic-item reveal">A legalistic reading of scripture growing up</div>
+        <div class="topic-item reveal">Enlisting in the Army at 18</div>
+        <div class="topic-item reveal">A fast rise through the 82nd Airborne</div>
+        <div class="topic-item reveal">A rooftop promise before the invasion of Iraq</div>
+        <div class="topic-item reveal">Leading a squad into Iraq at 21 years old</div>
+        <div class="topic-item reveal">Disillusionment coming home from a first deployment</div>
+        <div class="topic-item reveal">A 16-year marriage marked by drinking and infidelity</div>
+        <div class="topic-item reveal">Transitioning into Civil Affairs and learning Arabic</div>
+        <div class="topic-item reveal">Deployments during the counter-ISIS push</div>
+        <div class="topic-item reveal">An affair that ended a career and a marriage</div>
+        <div class="topic-item reveal">Involuntary separation from the Army after 16 years</div>
+        <div class="topic-item reveal">Total identity collapse after losing a career</div>
+        <div class="topic-item reveal">Roofing historic buildings on Fort Bragg</div>
+        <div class="topic-item reveal">A Facebook message that restarted everything</div>
+        <div class="topic-item reveal">Rebuilding a relationship during a deployment to Somalia</div>
+        <div class="topic-item reveal">Nearly sabotaging a relationship out of unworthiness</div>
+        <div class="topic-item reveal">Marriage, family, and baptism</div>
+        <div class="topic-item reveal">The difference between knowledge and wisdom in scripture</div>
+        <div class="topic-item reveal">Reconciling who you are at work and at home</div>
+        <div class="topic-item reveal">Living with honest doubt about "enough" faith</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div class="newsletter-inner">
+      <h2 class="newsletter-heading reveal">
+        Dispatches
+        <span>From the Path</span>
+      </h2>
+      <p class="newsletter-sub reveal">
+        No noise. No fluff. New episodes, raw stories, and the occasional word from the trail—direct to your inbox.
+      </p>
+      <form
+        class="newsletter-form reveal"
+        action="https://app.kit.com/forms/9257743/subscriptions"
+        method="post"
+        target="_blank"
+      >
+        <input type="email" name="email_address" placeholder="Your email address" required autocomplete="email" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-nospam reveal">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-col-label">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/episodes.html">Episodes</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/about-the-host.html">Host</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-label">Listen On</div>
+          <ul class="footer-links">
+            <li><a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener">Apple Podcasts</a></li>
+            <li><a href="https://open.spotify.com/show/2b2hgclLtwxCrXdXYvfIuU?si=26b902e8bd884fd1" target="_blank" rel="noopener">Spotify</a></li>
+            <li><a href="https://www.youtube.com/@theruggedpathpodcast" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://rumble.com/user/The_Rugged_Path_Podcast" target="_blank" rel="noopener">Rumble</a></li>
+            <li><a href="https://www.podbean.com/pw/pbblog-zs6j6-151d063" target="_blank" rel="noopener">Podbean</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-wordmark">The Rugged Path</div>
+        <div class="footer-copy">Raw Faith. Real Stories. &copy; 2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hero background pan-in
+    window.addEventListener('load', function () {
+      document.getElementById('heroBg').classList.add('loaded');
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    reveals.forEach(function (el) { observer.observe(el); });
+  </script>
+
+  <script src="/js/nav-include.js"></script>
+</body>
+</html>
