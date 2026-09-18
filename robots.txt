@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /rugged-path-guest-intake.html
+
+Sitemap: https://theruggedpathpodcast.com/sitemap.xml

@@ -9,9 +9,9 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/css/nav.css">
 <title>Contact — The Rugged Path</title>
-<meta name="description" content="Get in touch with The Rugged Path — submit a guest, reach out about sponsorship, or just say hello.">
+<meta name="description" content="Contact The Rugged Path — a Christian faith podcast. We only feature guests with a real testimony of faith forged in hardship. No business pitches, book promotion, or self-promotion.">
 <meta property="og:title" content="Contact — The Rugged Path">
-<meta property="og:description" content="Get in touch with The Rugged Path — submit a guest, reach out about sponsorship, or just say hello.">
+<meta property="og:description" content="Contact The Rugged Path — a Christian faith podcast. We only feature guests with a real testimony of faith forged in hardship. No business pitches, book promotion, or self-promotion.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -117,7 +117,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 48p
     <div class="eyebrow">Get in Touch</div>
     <h1 class="page-title">Contact</h1>
     <p class="page-sub">The Rugged Path</p>
-    <p class="page-desc">Submit a guest, reach out about sponsorship, or just say hello. Dan reads everything.</p>
+    <p class="page-desc">The Rugged Path exists to glorify God through real stories of faith forged in hard places. We are not a platform for business, book, or personal promotion. Submit a guest whose story fits that mission, or just say hello. Dan reads everything.</p>
   </div>
 </div>
 <div class="brand-rule"></div>
@@ -126,9 +126,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 48p
     <div class="contact-grid">
       <div class="reveal">
         <div class="eyebrow">Before You Write</div>
-        <p class="contact-intro">Dan reads every message. He does not always respond quickly because the show comes first — but he does read everything. If you are reaching out about a guest submission, the more specific you are about their story, the better.</p>
+        <p class="contact-intro">Dan reads every message. He does not always respond quickly because the show comes first — but he does read everything. This show exists exclusively to glorify God through real, unfiltered stories of faith found in hard places. We do not feature guests to promote a business, a book, a brand, or a personal platform, and submissions made for that purpose will not be considered. If you are reaching out about a guest submission, the more specific you are about their actual testimony of faith through hardship, the better.</p>
         <div class="contact-methods">
-          <div class="contact-method"><div class="cm-label">Guest Submissions</div><div class="cm-value">Use the form. Tell Dan the person&#x2019;s name, what they have been through, and why their story belongs on The Rugged Path.</div></div>
+          <div class="contact-method"><div class="cm-label">Guest Submissions</div><div class="cm-value">Use the form. This show is exclusively faith-based — we are looking for a real, personal testimony of faith forged through hardship, not a platform to promote a person, business, or product. Tell Dan the person&#x2019;s name, what they have actually been through, and why their story of faith belongs on The Rugged Path.</div></div>
           <div class="contact-method"><div class="cm-label">Sponsorship &amp; Partnership</div><div class="cm-value">Use the form and select Sponsorship. Include your brand and what you have in mind.</div></div>
           <div class="contact-method"><div class="cm-label">Social Media</div><div class="cm-value"><a href="https://www.instagram.com/theruggedpathpodcast" target="_blank" rel="noopener">@theruggedpathpodcast</a> on Instagram &amp; Facebook</div></div>
         </div>
@@ -136,9 +136,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 48p
       <div class="reveal">
         <div class="form-card">
           <div class="form-title">Send a Message</div>
-          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact">
-            <p style="display:none"><label>Do not fill this out: <input name="bot-field"></label></p>
+          <form id="contactForm" name="contact" method="POST" action="https://formspree.io/f/xzdnzaww" novalidate>
+            <input type="hidden" name="_subject" value="New Contact Form Submission — The Rugged Path">
+            <!-- Bot honeypot — hidden from humans, catches spam bots. Formspree looks for a field named _gotcha. -->
+            <p style="display:none"><label>Do not fill this out: <input name="_gotcha"></label></p>
             <div class="form-row"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="First and last name" required></div>
             <div class="form-row"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="your@email.com" required></div>
             <div class="form-row"><label for="reason">Reason for Contact</label>
@@ -151,8 +152,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 48p
                 <option value="other">Other</option>
               </select>
             </div>
-            <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us what is on your mind..." required></textarea></div>
-            <button type="submit" class="form-submit">Send Message</button>
+            <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" placeholder="For guest submissions, describe their actual testimony of faith through hardship. We do not accept business, book, or product promotion submitted as a guest pitch." required></textarea></div>
+            <p style="font-family:var(--condensed); font-size:11px; color:var(--cream-dim); letter-spacing:0.04em; margin-bottom:12px;">This show exists to glorify God, not to promote people, businesses, or products. Submissions made for self-promotion will not be considered.</p>
+            <button type="submit" class="form-submit" id="contactSubmitBtn">Send Message</button>
+            <p id="contactFormStatus" style="display:none; font-family:var(--condensed); font-size:13px; letter-spacing:0.05em; margin-top:14px; text-align:center;"></p>
           </form>
         </div>
       </div>
@@ -164,6 +167,48 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:44px 48p
 <div class="brand-rule"></div>
 <footer><div class="footer-inner"><div class="footer-top"><div><span class="footer-wordmark">The Rugged Path</span><span class="footer-tagline">Raw Faith. Real Stories.</span></div><div class="footer-col"><div class="footer-col-title">Navigate</div><ul><li><a href="/index.html">Home</a></li><li><a href="/episodes.html">Episodes</a></li><li><a href="/about.html">About the Show</a></li><li><a href="/about-the-host.html">About Dan</a></li><li><a href="/contact.html">Contact</a></li></ul></div><div class="footer-col"><div class="footer-col-title">Listen On</div><ul><li><a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener">Apple Podcasts</a></li><li><a href="https://open.spotify.com/show/theruggedpath" target="_blank" rel="noopener">Spotify</a></li><li><a href="https://www.youtube.com/@theruggedpathpodcast" target="_blank" rel="noopener">YouTube</a></li><li><a href="https://rumble.com/user/The_Rugged_Path_Podcast" target="_blank" rel="noopener">Rumble</a></li><li><a href="https://www.podbean.com/pw/pbblog-zs6j6-151d063" target="_blank" rel="noopener">Podbean</a></li></ul></div></div><div class="footer-bottom"><span class="footer-copy">&copy; 2026 The Rugged Path. All rights reserved.</span><span class="footer-copy">Hosted by Dan Black</span></div></div></footer>
 <script>var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("visible");obs.unobserve(x.target);}});},{threshold:0.08,rootMargin:"0px 0px -28px 0px"});document.querySelectorAll(".reveal").forEach(function(el){obs.observe(el);});</script>
+<script>
+  // ── FORM SUBMISSION (Formspree) ────────────────────────────────────────────
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const btn = document.getElementById('contactSubmitBtn');
+    const status = document.getElementById('contactFormStatus');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data,
+      });
+
+      if (response.ok) {
+        form.reset();
+        btn.textContent = 'Message Sent';
+        status.textContent = "Thanks — Dan will get back to you soon.";
+        status.style.color = 'var(--brand-lt)';
+        status.style.display = 'block';
+      } else {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        status.textContent = "Something went wrong. Please try again or email dan@theruggedpathpodcast.com directly.";
+        status.style.color = '#c88';
+        status.style.display = 'block';
+      }
+    } catch (err) {
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+      status.textContent = "Could not send. Please check your connection or email dan@theruggedpathpodcast.com directly.";
+      status.style.color = '#c88';
+      status.style.display = 'block';
+    }
+  });
+</script>
 <script src="/js/nav-include.js"></script>
 </body>
 </html>
