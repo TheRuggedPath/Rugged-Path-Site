@@ -107,6 +107,14 @@
   }
   .intro p + p { margin-top: 14px; }
   .intro strong { color: var(--cream); font-weight: 500; }
+  .intro p.focus-note {
+    margin-top: 22px;
+    padding-left: 16px;
+    border-left: 2px solid var(--brand);
+    color: var(--cream);
+  }
+  .field-ack { max-width: 680px; margin: 40px auto 0; padding: 0 24px; }
+  .field-ack .checkbox-label { text-transform: none; letter-spacing: 0; font-size: 14px; line-height: 1.6; color: var(--cream-mid); }
 
   /* ── SECTION ── */
   .section {
@@ -435,6 +443,7 @@
   <div class="intro">
     <p>Hey — thanks for saying yes. This form takes about <strong>10 minutes</strong> to fill out and handles everything we need before your episode drops.</p>
     <p>Two things trip people up before their episode goes live: getting bio info together, and tracking down photos. We've made both as easy as possible here. Fill out what you can now — even rough notes are better than nothing — and we'll take it from there.</p>
+    <p class="focus-note"><strong>One thing before you start.</strong> The Rugged Path exists for one reason: to point people to Christ through real testimony. We don't promote books, businesses, products, or individuals, and every interview stays on faith and your story. If a conversation turns toward promotion, we may not release it.</p>
   </div>
 
   <!-- Formspree: submissions post to this endpoint (dashboard: formspree.io) -->
@@ -521,9 +530,9 @@
           </div>
 
           <div class="field full">
-            <label>Anything else you want people to know?</label>
-            <span class="sublabel">A book, a ministry, a business, a cause — if there's something you want mentioned, put it here</span>
-            <textarea name="bio_extra" placeholder="e.g. I wrote a book called... / I run a nonprofit that..." rows="2"></textarea>
+            <label>Anything else we should know before we talk?</label>
+            <span class="sublabel">About your story, your family, or what's on your heart. This isn't a place to plug a book, business, or product. We don't promote those on the show.</span>
+            <textarea name="bio_extra" placeholder="e.g. My wife and I lead a small group at our church..." rows="2"></textarea>
           </div>
         </div>
 
@@ -535,12 +544,13 @@
 
       <div class="field">
         <label>Social Media Handles</label>
-        <span class="sublabel">Instagram, Facebook, anything you want us to tag or link</span>
+        <span class="sublabel">Instagram, Facebook — so we can tag you in posts, not to promote you</span>
         <input type="text" name="social" placeholder="e.g. @yourhandle on Instagram / facebook.com/yourname">
       </div>
 
       <div class="field">
         <label>Website or Link (if any)</label>
+        <span class="sublabel">For our reference only. We don't promote websites, books, or products.</span>
         <input type="url" name="website" placeholder="https://...">
       </div>
     </div>
@@ -673,6 +683,17 @@
       </div>
     </div>
 
+    <!-- FOCUS ACKNOWLEDGMENT (required; validated in script) -->
+    <div class="field-ack">
+      <div class="field" id="focusAckField">
+        <label class="checkbox-label">
+          <input type="checkbox" name="focus_ack" id="focusAck" value="Agreed">
+          <span>I understand The Rugged Path doesn't promote books, businesses, products, or people, and that an interview that turns toward promotion may not be released.</span>
+        </label>
+        <span class="field-error">Please check this box to continue.</span>
+      </div>
+    </div>
+
     <!-- SUBMIT -->
     <div class="submit-wrap">
       <p class="submit-note">Once you submit, Dan will follow up within a few days with your episode timeline and any questions.</p>
@@ -773,12 +794,25 @@
       }
     });
 
+    const ack = document.getElementById('focusAck');
+    if (ack && !ack.checked) {
+      const ackWrap = document.getElementById('focusAckField');
+      ackWrap.classList.add('has-error');
+      if (!firstError) firstError = ackWrap;
+      valid = false;
+    }
+
     if (firstError) {
       firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
     return valid;
   }
+
+  // Clear the acknowledgment error once the box is checked
+  document.getElementById('focusAck').addEventListener('change', function() {
+    if (this.checked) document.getElementById('focusAckField').classList.remove('has-error');
+  });
 
   // Clear error state on input
   document.querySelectorAll('input[required], textarea[required]').forEach(el => {
