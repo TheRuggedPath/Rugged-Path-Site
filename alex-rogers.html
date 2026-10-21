@@ -1,0 +1,1096 @@
+<!-- FILENAME: alex-rogers.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="144x144" href="/favicon-144x144.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/css/nav.css">
+  <title>Alex Rogers: What You Do Is Not Who You Are — Navy SEAL Christian Testimony | The Rugged Path</title>
+  <meta name="description" content="Alex Rogers spent twelve years as a Navy SEAL and years with one foot in church. This is the story of what he learned when every title was stripped away." />
+  <meta property="og:title" content="Alex Rogers: What You Do Is Not Who You Are — Navy SEAL Christian Testimony | The Rugged Path" />
+  <meta property="og:description" content="Alex Rogers spent twelve years as a U.S. Navy SEAL, and says what you do is not who you are. This is the story of the divorce, the jail time, and the faith that held when every title fell away." />
+  <meta property="og:image" content="/images/alex-rogers.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://theruggedpathpodcast.com/alex-rogers.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:      #ab9477;
+      --brand-lt:   #c8b090;
+      --bg:         #0d0d0f;
+      --bg2:        #121110;
+      --bg3:        #1a1816;
+      --cream:      #f0ebe0;
+      --cream-mid:  #c8bfaa;
+      --cream-dim:  #6b5f50;
+      --border:     rgba(171,148,119,0.12);
+      --border2:    rgba(171,148,119,0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Lora', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 80px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/images/alex-rogers.jpg');
+      background-size: cover;
+      background-position: center top;
+      transform: scale(1.04);
+      transition: transform 8s ease-out;
+    }
+
+    .hero-bg.loaded { transform: scale(1); }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(13,13,15,0.25) 0%,
+        rgba(13,13,15,0.45) 40%,
+        rgba(13,13,15,0.82) 72%,
+        rgba(13,13,15,0.97) 100%
+      );
+    }
+
+    /* Reticle SVG overlay */
+    .hero-reticle {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--brand);
+    }
+
+    .hero-guest-name {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(42px, 6vw, 72px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--brand);
+      line-height: 1.05;
+      margin-bottom: 14px;
+    }
+
+    .hero-hook {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 300;
+      font-size: clamp(24px, 3.5vw, 40px);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .hero-oneliner {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--cream-mid);
+      max-width: 560px;
+      line-height: 1.65;
+    }
+
+    /* ── CONTENT GRID ── */
+    .content-grid-wrap {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 72px 40px;
+    }
+
+    .content-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .episode-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: clamp(22px, 2.8vw, 30px);
+      color: var(--cream);
+      line-height: 1.3;
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    .episode-summary {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--cream-mid);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+
+    .tag {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      border: 1px solid var(--border2);
+      padding: 4px 12px;
+      border-radius: 2px;
+    }
+
+    .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .btn-primary {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      background: var(--brand);
+      color: var(--bg);
+      padding: 13px 28px;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-lt);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: 1px solid var(--border2);
+      color: var(--cream-mid);
+      padding: 13px 28px;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+
+    /* Player card */
+    .player-card {
+      position: relative;
+      background: var(--bg3);
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+
+    .player-card::before,
+    .player-card::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-color: var(--brand);
+      border-style: solid;
+    }
+
+    .player-card::before {
+      top: -1px; left: -1px;
+      border-width: 2px 0 0 2px;
+    }
+
+    .player-card::after {
+      bottom: -1px; right: -1px;
+      border-width: 0 2px 2px 0;
+    }
+
+    .player-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 18px;
+    }
+
+    .player-embed {
+      margin-bottom: 28px;
+    }
+
+    .platform-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      margin-bottom: 12px;
+    }
+
+    .platform-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .platform-link {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-mid);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.2s;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .platform-link:last-child { border-bottom: none; }
+    .platform-link:hover { color: var(--brand); }
+
+    .platform-link svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    /* ── STORY SECTION ── */
+    .story-section {
+      background: var(--bg);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--brand);
+      flex-shrink: 0;
+    }
+
+    .story-section p {
+      font-family: 'Lora', serif;
+      font-size: 17px;
+      color: var(--cream-mid);
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+
+    .pull-quote {
+      border-left: 2px solid var(--brand);
+      padding: 4px 0 4px 28px;
+      margin: 48px 0;
+    }
+
+    .pull-quote p {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--cream);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* ── KEY MOMENTS ── */
+    .moments-section {
+      background: var(--bg3);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .moments-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .moments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .quote-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 32px 28px;
+      position: relative;
+      transition: border-color 0.25s;
+    }
+
+    .quote-card:hover { border-color: var(--border2); }
+
+    .quote-card::before {
+      content: '\201C';
+      font-family: 'Lora', serif;
+      font-size: 64px;
+      line-height: 1;
+      color: var(--brand);
+      opacity: 0.3;
+      position: absolute;
+      top: 16px; left: 20px;
+    }
+
+    .quote-card blockquote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 15.5px;
+      color: var(--cream-mid);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      padding-top: 18px;
+    }
+
+    .quote-attribution {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    /* ── SCRIPTURE ── */
+    .scripture-section {
+      background: var(--bg2);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .scripture-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .scripture-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .scripture-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--brand);
+      padding: 24px 24px 24px 28px;
+    }
+
+    .scripture-ref {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+
+    .scripture-desc {
+      font-family: 'Lora', serif;
+      font-size: 14px;
+      color: var(--cream-dim);
+      line-height: 1.65;
+    }
+
+    /* ── TOPICS ── */
+    .topics-section {
+      background: var(--bg);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .topics-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 48px;
+    }
+
+    .topic-item {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      color: var(--cream-dim);
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .topic-item::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: var(--brand);
+      flex-shrink: 0;
+    }
+
+    /* ── NEWSLETTER ── */
+    #newsletter {
+      background: var(--bg3);
+      padding: 96px 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .newsletter-inner {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .newsletter-heading {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: clamp(26px, 3.5vw, 36px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .newsletter-heading span {
+      display: block;
+      color: var(--brand);
+    }
+
+    .newsletter-sub {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: var(--cream-mid);
+      margin-bottom: 40px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      margin-bottom: 14px;
+    }
+
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      background: var(--bg2);
+      border: 1px solid var(--border2);
+      border-right: none;
+      color: var(--cream);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      padding: 14px 18px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .newsletter-form input[type="email"]:focus {
+      border-color: var(--brand);
+    }
+
+    .newsletter-form input[type="email"]::placeholder {
+      color: var(--cream-dim);
+    }
+
+    .newsletter-form button {
+      background: var(--brand);
+      color: var(--bg);
+      border: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 14px 24px;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover { background: var(--brand-lt); }
+    .support-btn {
+      display: inline-block;
+      background: var(--brand);
+      color: var(--bg);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .support-btn:hover { background: var(--brand-lt); }
+
+
+    .newsletter-nospam {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--cream-dim);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 64px 40px 40px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-col-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      color: var(--cream-dim);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--brand); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-wordmark {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    .footer-copy {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      color: var(--cream-dim);
+    }
+
+    /* ── REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .content-grid { grid-template-columns: 1fr; }
+      .content-grid-wrap { padding: 56px 20px; }
+      .story-section, .moments-section, .scripture-section, .topics-section, #newsletter { padding: 72px 20px; }
+      footer { padding: 56px 20px 32px; }
+      .hero-content { padding: 0 20px; }
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form input[type="email"] { border-right: 1px solid var(--border2); border-bottom: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .hero-bg { background-image: url('/images/alex-rogers-mobile.jpg'); }
+    }
+
+    @media (max-width: 540px) {
+      .hero-guest-name { font-size: 34px; }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "url": "https://theruggedpathpodcast.com/alex-rogers.html",
+  "name": "Alex Rogers: What You Do Is Not Who You Are — Navy SEAL Christian Testimony",
+  "description": "Alex Rogers: What You Do Is Not Who You Are — Navy SEAL Christian Testimony on The Rugged Path, a Christian faith podcast hosted by Dan Black.",
+  "datePublished": "2026-10-27",
+  "image": "https://theruggedpathpodcast.com/images/alex-rogers.jpg",
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "The Rugged Path",
+    "url": "https://theruggedpathpodcast.com"
+  },
+  "associatedMedia": {
+    "@type": "MediaObject",
+    "contentUrl": "https://theruggedpath.podbean.com/e/alex-rogers-what-you-do-is-not-who-you-are-%e2%80%94-navy-seal-christian-testimony-the-rugged-path/"
+  }
+}
+</script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div id="nav-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+
+    <!-- Reticle SVG -->
+    <svg class="hero-reticle" viewBox="0 0 1440 820" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- horizontal dashed line -->
+      <line x1="0" y1="410" x2="1440" y2="410" stroke="rgba(171,148,119,0.13)" stroke-width="1" stroke-dasharray="6 14" />
+      <!-- vertical dashed line -->
+      <line x1="720" y1="0" x2="720" y2="820" stroke="rgba(171,148,119,0.10)" stroke-width="1" stroke-dasharray="6 14" />
+      <!-- center circle -->
+      <circle cx="720" cy="410" r="60" stroke="rgba(171,148,119,0.18)" stroke-width="1" fill="none" />
+      <circle cx="720" cy="410" r="6" stroke="rgba(171,148,119,0.35)" stroke-width="1" fill="none" />
+      <!-- triangle markers -->
+      <polygon points="720,340 712,356 728,356" fill="rgba(171,148,119,0.25)" />
+      <polygon points="720,480 712,464 728,464" fill="rgba(171,148,119,0.25)" />
+      <polygon points="648,410 664,402 664,418" fill="rgba(171,148,119,0.20)" />
+      <polygon points="792,410 776,402 776,418" fill="rgba(171,148,119,0.20)" />
+      <!-- coordinate label -->
+      <text x="730" y="395" font-family="'Barlow Condensed', sans-serif" font-size="10" letter-spacing="2" fill="rgba(171,148,119,0.30)">33.1584° N  97.0641° W</text>
+      <!-- corner bracket top-left -->
+      <path d="M 60 80 L 60 120 M 60 80 L 100 80" stroke="rgba(171,148,119,0.22)" stroke-width="1" fill="none" />
+      <!-- corner bracket bottom-right -->
+      <path d="M 1380 740 L 1380 700 M 1380 740 L 1340 740" stroke="rgba(171,148,119,0.22)" stroke-width="1" fill="none" />
+    </svg>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Episode 017 &nbsp;·&nbsp; October 27, 2026</div>
+      <h1 class="hero-guest-name">Alex Rogers</h1>
+      <div class="hero-hook">What You Do Is Not Who You Are</div>
+      <p class="hero-oneliner">Alex Rogers spent twelve years as a U.S. Navy SEAL before a divorce, the end of his career, and twelve days in jail forced him to learn who he is apart from what he does.</p>
+    </div>
+  </section>
+
+  <!-- CONTENT GRID -->
+  <section class="content-grid-wrap">
+    <div class="content-grid">
+
+      <!-- LEFT COLUMN -->
+      <div>
+        <h2 class="episode-title reveal">Alex Rogers: What You Do Is Not Who You Are — Navy SEAL Christian Testimony</h2>
+        <p class="episode-summary reveal">
+          Alex Rogers spent twelve years as a U.S. Navy SEAL with SEAL Team Three, including three deployments. He grew up around church in small-town central Vermont and accepted Christ at six years old. But he says that never meant he was submitted.
+        </p>
+        <p class="episode-summary reveal">
+          For years he lived a double life: hungover in church on Sundays, one foot in, knowing the right answer and refusing to fully give himself to it. His divorce was final in April 2025, and he left the Navy the next month.
+        </p>
+        <p class="episode-summary reveal">
+          A move to North Carolina, a low season, and twelve days in jail followed. With a King James Bible and a lot of time, Alex began to learn that what you do is not who you are.
+        </p>
+        <p class="episode-summary reveal">
+          Alex and Dan talk about whether a man can be tough, even capable of violence, and still be a Christian, why reconciliation comes before worship, the wounds underneath, and what it means to say Jesus is his two man.
+        </p>
+        <p class="episode-summary reveal">
+          This episode contains language some listeners may find objectionable. We chose not to edit it out. It also touches on suicide and on what kept him going.
+        </p>
+
+        <div class="tags-wrap reveal">
+          <span class="tag">Faith</span>
+          <span class="tag">Identity</span>
+          <span class="tag">Forgiveness</span>
+          <span class="tag">Reconciliation</span>
+          <span class="tag">Marriage</span>
+          <span class="tag">Divorce</span>
+          <span class="tag">Navy SEAL</span>
+          <span class="tag">Veteran</span>
+          <span class="tag">Biblical Masculinity</span>
+          <span class="tag">Surrender</span>
+          <span class="tag">Redemption</span>
+          <span class="tag">Christian Testimony</span>
+        </div>
+
+        <div class="btn-row reveal">
+          <a href="https://theruggedpath.podbean.com/e/alex-rogers-what-you-do-is-not-who-you-are-%e2%80%94-navy-seal-christian-testimony-the-rugged-path/?token=2df3892dc19c3e3ab09c460fbc94cbb8" target="_blank" rel="noopener" class="btn-primary">Listen on Podbean</a>
+          <a href="https://youtu.be/zwvin43F-bw" target="_blank" rel="noopener" class="btn-ghost">Watch on YouTube</a>
+          <a href="/episodes.html" class="btn-ghost">All Episodes</a>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: PLAYER CARD -->
+      <div>
+        <div class="player-card reveal">
+          <div class="player-label">Now Playing</div>
+          <div class="player-embed">
+            <iframe title="Alex Rogers: What You Do Is Not Who You Are — Navy SEAL Christian Testimony | The Rugged Path" allowtransparency="true" height="300" width="100%" style="border: none; min-width: min(100%, 430px);height:300px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=inkb4-1b8cfb5-pb&from=pb6admin&square=1&share=1&download=1&rtl=0&fonts=Arial&skin=1b1b1b&font-color=auto&logo_link=episode_page&btn-skin=666666&size=300" loading="lazy" allowfullscreen=""></iframe>
+          </div>
+
+          <div class="platform-label">Also available on</div>
+          <div class="platform-links">
+            <a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener" class="platform-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 4.5c2.81 0 5.09 2.28 5.09 5.09 0 2.31-1.55 4.28-3.67 4.88v4.03c0 .77-.63 1.4-1.4 1.4h-.05c-.77 0-1.4-.63-1.4-1.4v-4.03C8.46 13.87 6.91 11.9 6.91 9.59 6.91 6.78 9.19 4.5 12 4.5zm0 2.14c-1.63 0-2.95 1.32-2.95 2.95S10.37 12.54 12 12.54s2.95-1.32 2.95-2.95S13.63 6.64 12 6.64z"/></svg>
+              Apple Podcasts
+            </a>
+            <a href="https://open.spotify.com/episode/78zl7jNLyEbMdz3paI8Flt?si=CKqKMMhKQcqaORQWFC72iQ" target="_blank" rel="noopener" class="platform-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.52 17.28c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02zm1.44-3.3c-.3.42-.84.54-1.26.24-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-.96-.12-1.08-.6-.12-.48.12-.96.6-1.08 4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.18 1.2zm.12-3.36c-3.84-2.28-10.2-2.52-13.86-1.38-.54.18-1.08-.12-1.26-.66-.18-.54.12-1.08.66-1.26 4.2-1.26 11.1-1.02 15.48 1.62.48.3.66.96.36 1.44-.3.42-.96.6-1.38.24z"/></svg>
+              Spotify
+            </a>
+            <a href="https://youtu.be/zwvin43F-bw" target="_blank" rel="noopener" class="platform-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.54 3.5 12 3.5 12 3.5s-7.54 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.04 0 12 0 12s0 3.96.5 5.81a3.02 3.02 0 0 0 2.12 2.14C4.46 20.5 12 20.5 12 20.5s7.54 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.96 24 12 24 12s0-3.96-.5-5.81zM9.75 15.5V8.5L15.5 12l-5.75 3.5z"/></svg>
+              YouTube
+            </a>
+            <a href="https://rumble.com/v7h5i76-alex-rogers-what-you-do-is-not-who-you-are-navy-seal-christian-testimony-th.html" target="_blank" rel="noopener" class="platform-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm4.5 16.5l-6-3.5V7.5L16.5 11v5.5z"/></svg>
+              Rumble
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="story-section">
+    <div class="section-inner">
+      <div class="eyebrow reveal">The Story</div>
+
+      <p class="reveal">
+        Alex Rogers grew up in small-town central Vermont, around church, and accepted Christ at six years old. After a rough teenage phase, he took the road from the street to the seat that led to the SEAL teams, where he spent twelve years with SEAL Team Three and three deployments. Through all of it, he says, he was around church and Christianity without ever being submitted.
+      </p>
+
+      <p class="reveal">
+        He is honest about the other half of that story. For years he lived a double life: partying and cheating on weekends, then showing up to church hungover. He says he cheated on his ex-wife for a long time, and that she has been supportive since. His divorce was final in April 2025, and he left the Navy the next month.
+      </p>
+
+      <div class="pull-quote reveal">
+        <p>"I know it's the right answer, but I'm not going to fully submit."</p>
+      </div>
+
+      <p class="reveal">
+        A move to North Carolina in January 2026 brought a low season, and then twelve days in jail. There, with a King James Bible and courses on mindfulness and forgiveness, everything else was stripped away. Alex came away convinced that reconciliation comes before worship, and that when you have nothing else, that is when you find God.
+      </p>
+
+      <p class="reveal">
+        Alex also takes on a question plenty of men carry quietly: can a man be tough, even capable of violence, and still be a Christian? He talks about the abandonment wounds underneath his choices, the lone-wolf mistake that kept him isolated, and why he now says Jesus is his two man, a reference to the teammate every SEAL stack depends on.
+      </p>
+
+      <p class="reveal">
+        The conversation turns to ego as the enemy, to gratitude and generosity as the answer, and to the difference between judgment and condemnation. It also touches on suicide and on what kept him going. Alex is candid throughout, and so is the language, which we chose not to edit out.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- KEY MOMENTS -->
+  <section class="moments-section">
+    <div class="moments-inner">
+      <div class="eyebrow reveal">From This Episode</div>
+
+      <div class="moments-grid">
+        <div class="quote-card reveal">
+          <blockquote>"What you do is not who you are."</blockquote>
+          <div class="quote-attribution">— Alex Rogers</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"Everything is temporary. What's not is the Lord."</blockquote>
+          <div class="quote-attribution">— Alex Rogers</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"I know it's the right answer, but I'm not going to fully submit."</blockquote>
+          <div class="quote-attribution">— On years of one foot in, one foot out</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"I am enough. I am worthy. I am fearfully and wonderfully made. I'm a child of God. And that's all I need."</blockquote>
+          <div class="quote-attribution">— Alex Rogers</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"Jesus is my two man."</blockquote>
+          <div class="quote-attribution">— On not going it alone</div>
+        </div>
+
+        <div class="quote-card reveal">
+          <blockquote>"God's voice is quiet."</blockquote>
+          <div class="quote-attribution">— Alex Rogers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCRIPTURE -->
+  <section class="scripture-section">
+    <div class="scripture-inner">
+      <div class="eyebrow reveal">Scripture</div>
+
+      <div class="scripture-grid">
+        <div class="scripture-card reveal">
+          <div class="scripture-ref">Matthew 5:23&#8211;24</div>
+          <div class="scripture-desc">"First be reconciled to thy brother, and then come and offer thy gift." Alex's conviction that reconciliation comes before worship.</div>
+        </div>
+
+        <div class="scripture-card reveal">
+          <div class="scripture-ref">Matthew 6:14&#8211;15</div>
+          <div class="scripture-desc">"If ye forgive men their trespasses, your heavenly Father will also forgive you." Ties to his lesson that you cannot receive forgiveness while refusing to give it.</div>
+        </div>
+
+        <div class="scripture-card reveal">
+          <div class="scripture-ref">Psalm 139:14</div>
+          <div class="scripture-desc">"I am fearfully and wonderfully made." The identity Alex now claims, apart from any title or uniform.</div>
+        </div>
+
+        <div class="scripture-card reveal">
+          <div class="scripture-ref">James 1:8</div>
+          <div class="scripture-desc">"A double minded man is unstable in all his ways." The double life Alex describes, one foot in the church and one foot out.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="topics-section">
+    <div class="topics-inner">
+      <div class="eyebrow reveal">Topics Covered</div>
+
+      <div class="topics-grid">
+        <div class="topic-item reveal">Growing up in small-town central Vermont</div>
+        <div class="topic-item reveal">Accepting Christ at six</div>
+        <div class="topic-item reveal">The road from the street to the SEAL teams</div>
+        <div class="topic-item reveal">Twelve years with SEAL Team Three</div>
+        <div class="topic-item reveal">A double life: Saturday night, Sunday morning</div>
+        <div class="topic-item reveal">Divorce and leaving the Navy</div>
+        <div class="topic-item reveal">Twelve days in jail</div>
+        <div class="topic-item reveal">"Reconciliation comes before worship"</div>
+        <div class="topic-item reveal">The abandonment wounds underneath</div>
+        <div class="topic-item reveal">Can a man be tough and still be a Christian?</div>
+        <div class="topic-item reveal">Identity beyond the uniform</div>
+        <div class="topic-item reveal">The lone-wolf mistake</div>
+        <div class="topic-item reveal">"Jesus is my two man"</div>
+        <div class="topic-item reveal">Ego is the enemy</div>
+        <div class="topic-item reveal">Gratitude and generosity</div>
+        <div class="topic-item reveal">Judgment versus condemnation</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SUPPORT THE SHOW -->
+  <section id="support">
+    <div class="newsletter-inner">
+      <h2 class="newsletter-heading reveal">
+        Help Us Keep
+        <span>Telling These Stories</span>
+      </h2>
+      <p class="newsletter-sub reveal">
+        Most of the guests you hear on this show don't live near us, and some can't afford the trip. Your support helps cover travel and keeps these conversations happening.
+      </p>
+      <a href="https://donorbox.org/r-p" target="_blank" rel="noopener" class="support-btn reveal">Support the Show</a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div class="newsletter-inner">
+      <h2 class="newsletter-heading reveal">
+        Dispatches
+        <span>From the Path</span>
+      </h2>
+      <p class="newsletter-sub reveal">
+        No noise. No fluff. New episodes, raw stories, and the occasional word from the trail—direct to your inbox.
+      </p>
+      <form
+        class="newsletter-form reveal"
+        action="https://app.kit.com/forms/9257743/subscriptions"
+        method="post"
+        target="_blank"
+      >
+        <input type="email" name="email_address" placeholder="Your email address" required autocomplete="email" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="newsletter-nospam reveal">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-col-label">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/episodes.html">Episodes</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/about-the-host.html">Host</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-label">Listen On</div>
+          <ul class="footer-links">
+            <li><a href="https://podcasts.apple.com/us/podcast/the-rugged-path/id1885759919" target="_blank" rel="noopener">Apple Podcasts</a></li>
+            <li><a href="https://open.spotify.com/show/2b2hgclLtwxCrXdXYvfIuU?si=26b902e8bd884fd1" target="_blank" rel="noopener">Spotify</a></li>
+            <li><a href="https://www.youtube.com/@theruggedpathpodcast" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://rumble.com/user/The_Rugged_Path_Podcast" target="_blank" rel="noopener">Rumble</a></li>
+            <li><a href="https://www.podbean.com/pw/pbblog-zs6j6-151d063" target="_blank" rel="noopener">Podbean</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-wordmark">The Rugged Path</div>
+        <div class="footer-copy">Raw Faith. Real Stories. &copy; 2026 &nbsp;&middot;&nbsp; <a href="https://donorbox.org/r-p" target="_blank" rel="noopener">Support the Show</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hero background pan-in
+    window.addEventListener('load', function () {
+      document.getElementById('heroBg').classList.add('loaded');
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    reveals.forEach(function (el) { observer.observe(el); });
+  </script>
+
+  <script src="/js/nav-include.js"></script>
+</body>
+</html>
