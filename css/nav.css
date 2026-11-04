@@ -107,7 +107,7 @@ nav {
 
 .mobile-menu a.active { color: var(--brand); }
 
-@media (max-width: 860px) {
+@media (max-width: 1100px) {
   nav { padding: 0 20px; }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
